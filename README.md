@@ -1,3 +1,8 @@
 # org-emacs
-файлы в формате org для emacs(простой организатор заметок)
-files in org format for emacs (simple note organizer)
+## Режим org-mode
+файлы в формате org для emacs(простой организатор заметок)<br />
+files in org format for emacs (simple note organizer)<br />
+<br />
+<br />
+<code>![org_emacs](/image/org_emacs.png "org_emacs")</code>
+
