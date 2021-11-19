@@ -1,0 +1,2523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-04-14 Ср 17:26 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org732ad24">1. Terminal</a>
+<ul>
+<li><a href="#orge3fbb2b">1.1. Стандартные системные утилиты</a></li>
+<li><a href="#org7ee4d16">1.2. Консольные программы</a></li>
+<li><a href="#org1e9b9b5">1.3. Запуск консольных программ горячими клавишами(с клавиатуры)</a></li>
+<li><a href="#org1877c1b">1.4. lsblk</a></li>
+<li><a href="#org024060b">1.5. fdisk</a></li>
+<li><a href="#org7d9c515">1.6. fdisk-создание<sub>разделов</sub>(форматирование флешки)</a></li>
+<li><a href="#org01e54b7">1.7. fdisk<sub>и</sub><sub>vfat</sub></a></li>
+<li><a href="#org25e28f6">1.8. Rosa Grub2</a></li>
+<li><a href="#org720de70">1.9. Создание образа раздела</a></li>
+<li><a href="#org8bfb7f9">1.10. Создание образа диска с dd</a></li>
+<li><a href="#orgcce7a96">1.11. backup disk</a></li>
+<li><a href="#org02a2894">1.12. ISO</a></li>
+<li><a href="#org81a0c4f">1.13. Монтирование флешек<sub>mount</sub></a></li>
+<li><a href="#org447e62b">1.14. Монтирование ISO Образа в Linux</a></li>
+<li><a href="#org53e1e4a">1.15. enp1s0</a></li>
+<li><a href="#org737956a">1.16. узнать свой ip</a></li>
+<li><a href="#org510b25d">1.17. date<sub>and</sub><sub>time</sub></a></li>
+<li><a href="#org8f0c9c1">1.18. copy-paste xclip  xsel</a></li>
+<li><a href="#orga71675d">1.19. цвет фона терминала</a></li>
+<li><a href="#org7d4811c">1.20. youtube-dl</a></li>
+<li><a href="#org0cdd918">1.21. youtube-dll<sub>commands</sub></a></li>
+<li><a href="#org7ad60ec">1.22. wget</a></li>
+<li><a href="#org7c3a880">1.23. rsync</a></li>
+<li><a href="#org8f1fb7c">1.24. rsync1</a></li>
+<li><a href="#org0c981cd">1.25. terminal  rsync</a></li>
+<li><a href="#orge6f2b57">1.26. xine</a></li>
+<li><a href="#orgf21da50">1.27. Vimium C</a></li>
+<li><a href="#org52e7326">1.28. alsamixer</a></li>
+<li><a href="#org5218c06">1.29. Погода в терминале</a></li>
+<li><a href="#org9eb47f7">1.30. Googler-googl in terminal</a></li>
+<li><a href="#org4c9d869">1.31. Calcurs-консольный календарь</a></li>
+<li><a href="#org55eefa1">1.32. Как вытянуть звук из видео файлов</a></li>
+<li><a href="#orga68be2d">1.33. Конвертирование музыки в utf-8</a></li>
+<li><a href="#orgdd2c566">1.34. mp3unicode</a></li>
+<li><a href="#orgddda717">1.35. net-tools<sub>ifconfig</sub></a></li>
+<li><a href="#org3ebb7e9">1.36. Чистим систему</a></li>
+<li><a href="#org95f0608">1.37. проба оборудования(в Rosa)</a></li>
+<li><a href="#orga52ee9e">1.38. Converting video and audio ffmpeg</a></li>
+<li><a href="#orga579892">1.39. Вывод систем.ошибок in log file</a></li>
+<li><a href="#orgf982928">1.40. Дата и время установки ОС Linux</a></li>
+<li><a href="#org32941da">1.41. узнать сетевую карту</a></li>
+<li><a href="#org203b066">1.42. все подключения инета</a></li>
+<li><a href="#orgd41fde2">1.43. touch<sub>создать</sub> файл</a></li>
+<li><a href="#org34637bc">1.44. Команда cp<sub>создать</sub> файл</a></li>
+<li><a href="#orgc12bfdb">1.45. список всех пакетов в файл</a></li>
+<li><a href="#org4e9b9e4">1.46. Как в Linux вывести список установленных пакетов</a></li>
+<li><a href="#orgf070264">1.47. Команды обновления системы(debian&#x2026;)</a></li>
+<li><a href="#orgb91b75a">1.48. Удаление программ</a></li>
+<li><a href="#orgeb4eeea">1.49. компиляция программ из исходников</a></li>
+<li><a href="#orgaab379c">1.50. Сборка пакетов из исходников</a></li>
+<li><a href="#org79b8e01">1.51. Скорость интернета</a></li>
+<li><a href="#orgc572069">1.52. найти IP-адрес сервера в терминале</a></li>
+<li><a href="#org52cd941">1.53. Автоматический вход в систему</a></li>
+<li><a href="#org19722b3">1.54. Быстрое выключение компа in xfce</a></li>
+<li><a href="#org147c5c8">1.55. подключение смартфона</a></li>
+<li><a href="#orgf4de960">1.56. сведения о компьютере</a></li>
+<li><a href="#org0c85bbb">1.57. иксы и minimalde</a></li>
+<li><a href="#org0739184">1.58. команды из консоли(файловые менеджеры)</a></li>
+<li><a href="#org03529d6">1.59. Установка deb пакета через терминал</a></li>
+<li><a href="#org62883c8">1.60. Как узнать версию Debian</a></li>
+<li><a href="#org3895230">1.61. узнать размер папки</a></li>
+<li><a href="#orgc7ac8d6">1.62. узнать размер файла</a></li>
+<li><a href="#org665c766">1.63. как узнать uuid диска linux</a></li>
+<li><a href="#org64bf132">1.64. узнать размер диска<sub>dev</sub>-sda</a></li>
+<li><a href="#org6843907">1.65. Узнать свою видеокарту</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org732ad24" class="outline-2">
+<h2 id="org732ad24"><span class="section-number-2">1</span> Terminal</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orge3fbb2b" class="outline-3">
+<h3 id="orge3fbb2b"><span class="section-number-3">1.1</span> Стандартные системные утилиты</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+apt-listchanges
+lsof
+mlocate
+w3m
+at
+libswitch-perl
+xz-utils
+telnet
+dc
+bsd-mailx
+file
+exim4-config
+m4
+bc
+dnsutils
+exim4
+python2.7
+openssh-client
+aptitude
+bash-completion
+python
+host
+install-info
+bzip2
+reportbug
+krb5-locales
+bind9-host
+time
+info
+liblockfile-bin
+whois
+aptitude-common
+patch
+ncurses-term
+mutt
+mime-support
+exim4-daemon-light
+ftp
+nfs-common
+python-reportbug
+rpcbind
+texinfo
+python-minimal
+procmail
+libclass-isa-perl
+python-apt
+python-support
+exim4-base
+debian-faq
+doc-debian
+</p>
+</div>
+</div>
+<div id="outline-container-org7ee4d16" class="outline-3">
+<h3 id="org7ee4d16"><span class="section-number-3">1.2</span> Консольные программы</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+mc - файловый менеджер
+mocp - аудиоплеер
+htop - системный монитор
+</p>
+</div>
+</div>
+<div id="outline-container-org1e9b9b5" class="outline-3">
+<h3 id="org1e9b9b5"><span class="section-number-3">1.3</span> Запуск консольных программ горячими клавишами(с клавиатуры)</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+название терминала+ -e+название программы-пример:
+xfce4-terminal(konsole) -e mc(mocp)
+</p>
+</div>
+</div>
+<div id="outline-container-org1877c1b" class="outline-3">
+<h3 id="org1877c1b"><span class="section-number-3">1.4</span> lsblk</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+lsblk -f подробней не куда…
+</p>
+</div>
+</div>
+<div id="outline-container-org024060b" class="outline-3">
+<h3 id="org024060b"><span class="section-number-3">1.5</span> fdisk</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+$ ls -1 /dev/sd?
+/dev/sda
+/dev/sdb
+</p>
+
+<p>
+$ sudo fdisk -l /dev/sda
+ &#x2026;
+Устр-во       начало     Конец   Секторы Размер Тип
+/dev/sda1       4096    618495    614400   300M EFI
+/dev/sda2     618496 231612850 230994355 110,2G Файловая система Linux
+/dev/sda3  231612851 250067789  18454939   8,8G Linux своп
+</p>
+
+<p>
+$ sudo fdisk -l /dev/sdb
+ &#x2026;
+Устр-во    Загрузочный начало     Конец   Секторы Размер Идентификатор Тип
+/dev/sdb1                2048 468860927 468858880 223,6G            83 Linux
+</p>
+
+<p>
+$ mount | grep /dev/sdb
+/dev/sdb1 on /mnt/240 type ext4 (rw,noatime,discard)
+</p>
+
+<p>
+Read more
+man fdisk
+</p>
+</div>
+</div>
+<div id="outline-container-org7d9c515" class="outline-3">
+<h3 id="org7d9c515"><span class="section-number-3">1.6</span> fdisk-создание<sub>разделов</sub>(форматирование флешки)</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+fdisk /dev/sdX
+o or g
+n
+4 раза [Enter]
+w
+Ваша флэшка восстановлена
+</p>
+</div>
+</div>
+<div id="outline-container-org01e54b7" class="outline-3">
+<h3 id="org01e54b7"><span class="section-number-3">1.7</span> fdisk<sub>и</sub><sub>vfat</sub></h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+ШАГ 1.Определить имя флешки
+sudo fdisk -l или df
+</p>
+
+<p>
+Шаг 2. Размонтирование флешки
+</p>
+
+<p>
+Если флешка смонтирована в файловую систему, то форматировать её у вас не получится. Поэтому сначала нужно её размонтировать, для этого выполните:
+</p>
+
+<p>
+sudo umount /dev/sdb1
+</p>
+
+<p>
+Здесь /dev/sdb1 - имя флешки в файловой системе, которое мы узнали в предыдущем шаге.
+Шаг 3. Форматирование
+</p>
+
+<p>
+Дальше отформатировать флешку очень просто. Для этого используется утилита mkfs. Синтаксис команды очень прост:
+</p>
+
+<p>
+$ sudo mkfs -t файловая<sub>система</sub> устройство
+</p>
+
+<p>
+В качестве файловой системы может использоваться любая поддерживаемая системой, например, ext4, ntfs, xfs, btrfs, vfat. Но для нормальной работы флешки в Windows рекомендуется использовать файловую систему vfat. С помощью опции -L можно задать метку раздела. Тогда команда будет выглядеть вот так:
+</p>
+
+<p>
+sudo mkfs -t ext4 -L FLASH /dev/sdb1
+</p>
+
+<p>
+Для файловой системы vfat опция -L не поддерживается, вместо неё нужно использовать -n:
+</p>
+
+<p>
+sudo mkfs -t vfat -n FLASH /dev/sdb1
+</p>
+
+<p>
+После того, как форматирование флешки в Linux завершится, флешка будет готова к использованию.
+</p>
+</div>
+</div>
+<div id="outline-container-org25e28f6" class="outline-3">
+<h3 id="org25e28f6"><span class="section-number-3">1.8</span> Rosa Grub2</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+fdisk -l
+mount /dev/sdaX /mnt
+grub2-install &#x2013;root-directory=/mnt /dev/sda
+update-grub2
+Поправочка: Команду update-grub2 нужно выполнить в рабочей установленной системе на вашем компьютере после загрузки в неё.
+</p>
+
+<p>
+Для Debian,Ubuntu команды:
+</p>
+
+<p>
+grub-install &#x2013;root-directory=/mnt /dev/sda
+</p>
+</div>
+</div>
+<div id="outline-container-org720de70" class="outline-3">
+<h3 id="org720de70"><span class="section-number-3">1.9</span> Создание образа раздела</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+Создание образа раздела
+</p>
+
+<p>
+sudo dd if=/dev/sda4 of=~/backup.img
+</p>
+
+<p>
+Здесь /dev/sda4 - это ваш корневой раздел. После завершения выполнения команды вы получите готовый образ, затем, чтобы восстановить систему из этой копии достаточно поменять опции местами и указать путь к файлу копии:
+</p>
+
+<p>
+sudo dd if=~/backup.img of=/dev/sda4
+</p>
+</div>
+</div>
+<div id="outline-container-org8bfb7f9" class="outline-3">
+<h3 id="org8bfb7f9"><span class="section-number-3">1.10</span> Создание образа диска с dd</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+Создание образа жесткого диска
+dd if=/dev/sda of=/mnt/backup/sda.img bs=8M conv=sync,noerror
+</p>
+
+<p>
+if=/dev/sda - копируем весь жесткий диск sda;
+of=/mnt/backup/sda.img - копируем в /mnt/backup/sda.img;
+bs=8M - задаем размер кэша жесткого диска для ускорения процедуры копирования (иначе данные будут сбрасываться малыми порциями по 512 байт);
+conv=sync,noerror - указываем dd на необходимость копирования по типу бит-в-бит с игнорированием ошибок чтения.
+</p>
+
+<p>
+Для сокращения размера образа жесткого диска его можно сжать любым архиватором.
+dd if=/dev/sda bs=8M conv=sync,noerror | gzip -c &gt; /mnt/backup/sda.img
+Восстановление образа жесткого диска
+</p>
+
+<p>
+Для восстановления образа жесткого диска необходимо проделать процедуру обратную процедуре создания этого образа.
+dd if=/mnt/backup/sda.img of=/dev/sda bs=8M conv=sync,noerror
+</p>
+
+<p>
+При использовании сжатия параллельно необходимо разархивировать образ.
+gunzip -c /mnt/backup/sda.img | dd of=/dev/sda conv=sync,noerror bs=8M
+Миграция системы на другой жесткий диск
+</p>
+
+<p>
+Для миграции всей системы на другой жесткий диск необходимо, в качестве цели назначения задать расположение нового диска.
+dd if=/dev/sda of=/dev/sdb bs=8M conv=sync,noerror
+</p>
+
+<p>
+После чего при необходимости устанавливаем загрузку с данного жесткого диска. При условии, что новый жесткий диск больше старого, на нем останется неразмеченная область. Ее следует разметить и отформатировать согласно имеющимся требованиям.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcce7a96" class="outline-3">
+<h3 id="orgcce7a96"><span class="section-number-3">1.11</span> backup disk</h3>
+<div class="outline-text-3" id="text-1-11">
+<p>
+Для выполнения резервной копии наберите такую команду:
+</p>
+
+<p>
+dpkg &#x2013;get-selections | grep -v deinstall &gt; backup.txt
+</p>
+
+<p>
+когда система сломается, переустановите ее с установочного носителя, а затем просто выполните команды:
+</p>
+
+<p>
+sudo dpkg &#x2013;set-selections &lt; backup.txt
+</p>
+
+<p>
+sudo apt-get -y update
+$ sudo apt-get dselect-upgrade
+</p>
+
+<p>
+СОЗДАНИЕ ОБРАЗА РАЗДЕЛА
+</p>
+
+<p>
+Утилита просто переносит весь диск по одному байту в образ. Команда выглядит вот так:
+</p>
+
+<p>
+sudo dd if=/dev/sda4 of=~/backup.img
+</p>
+
+<p>
+чтобы восстановить систему из этой копии достаточно поменять опции местами и указать путь к файлу копии:
+</p>
+
+<p>
+sudo dd if=~/backup.img of=/dev/sda4
+</p>
+
+
+<p>
+!!!создать полную резервную копию системы Linux с помощью утилиты Rsync
+</p>
+
+<p>
+Для начала, нам нужен резервный носитель (USB-флешка или внешний жесткий диск). 
+Далее нужно узнать имя диска, используя команду «fdisk -l». В моем случае диск 
+определился как /dev/sdb1. Теперь примонтируем наш резервный накопитель в любое 
+удобное место, я выбрал /mnt.
+</p>
+
+<p>
+$ sudo mount /dev/sdb1 /mnt
+</p>
+
+<p>
+Чтобы создать резервную копию всей системы, все, что вам нужно сделать, это 
+открыть терминал. Затем запустить в нем следующую команду от имени пользователя 
+root:
+</p>
+
+<p>
+$ sudo rsync -aAXv / 
+&#x2013;exclude={"<i>dev/*","/proc/*","/home/*","/sys/*","/tmp/*","/run/*","/mnt/*","</i>
+media /* ","/lost+found"} /mnt
+</p>
+
+<p>
+Эта команда создаст резервную копию всей корневой директории (/), исключая 
+директории /dev, /proc, /sys, /tmp, /run, /mnt, /media,  lost + found в папке / 
+mnt.
+</p>
+
+<p>
+    rsync — быстрая, универсальная, локальная и удаленная утилита копирования 
+файлов.
+    -aAXv — файлы передаются в режиме «архив», что гарантирует сохранение 
+символических ссылок, устройств, разрешений, владельцев, времени модификации, 
+списков ACL и расширенных атрибутов.
+    / — Исходный каталог.
+    —exclude — исключает заданные каталоги из резервной копии.
+    /mnt — это папка назначения резервного копирования.
+</p>
+
+
+<p>
+    Обязательно исключите целевой каталог, если он существует в локальной 
+системе, иначе будет бесконечный цикл копирования.
+</p>
+
+<p>
+Чтобы восстановить систему из резервной копии, просто измените исходные и 
+целевые пути в приведенной выше команде.
+</p>
+</div>
+</div>
+<div id="outline-container-org02a2894" class="outline-3">
+<h3 id="org02a2894"><span class="section-number-3">1.12</span> ISO</h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+ЕСЛИ ХОТИТЕ ВИДЕТЬ ПРОЦЕСС СОЗДАНИЯ ФЛЕШКИ, ТО ТУТ ЕСТЬ НЕСКОЛЬКО ПУТЕЙ. ПЕРВЫЙ ПУТЬ Я НЕ БУДУ РАССКАЗЫВАТЬ, ПОТОМУ КАК ОН МНЕ НЕ ПОНРАВИЛСЯ, А ВОТ АЛЬТЕРНАТИВНОЕ РЕШЕНИЕ ЭТОЙ ПРОБЛЕМЫ ВЫГЛЯДИТ НАМНОГО ЛУЧШЕ. ДЛЯ ЭТОГО НУЖНО БУДЕТ УСТАНОВИТЬ УЛУЧШЕННУЮ ВЕРСИЮ DD, КОТОРАЯ НОСИТ НАЗВАНИЕ DCFLDD.
+</p>
+
+<p>
+SUDO APT-GET INSTALL DCFLDD
+</p>
+
+<p>
+СОТРУДНИКИ ЛАБОРАТОРИИ DOD COMPUTER FORENSICS LABORATORY (DCFL) внесли некоторые изменения в команду dd, тем самым улучшив ее и применяя в своих исследовательских работах. В итоге на свет появилась команда dcfldd, которая обеспечивает хеширование копируемых данных через некоторые промежутки времени для их аутентификации. Более того, dcfldd работает гораздо быстрее, чем dd. Теперь, если Вы хотите именно видеть прогресс копирования, либо создания образа, Вам нужно выполнить команду:
+</p>
+
+<p>
+sudo dcfldd if=/dev/sdc of=image.iso
+</p>
+
+<p>
+Теперь, когда образ готов, можно создать новую, загрузочную флешку. Вставим вместо флешки с системами, новую, пустую. Думаю, что она определится системой так же, как и первая — sdc, но лучше перепроверить-sudo fdisk -l. Теперь команда будет такой:
+</p>
+
+<p>
+sudo dd if=image.iso of=/dev/sdc status=progress
+or 
+sudo dd if=debian.iso of=/dev/sdx bs=4M &amp;&amp; sync
+</p>
+
+<p>
+Ну а если у Вас пустая флешка имеет тот же размер, что и носитель с нужными Вам данными, то можно просто скопировать все содержимое первой флешки сразу на вторую, минуя создание образа на жесткий диск. В этом случае команда будет следующей:
+</p>
+
+<p>
+sudo dd if=/dev/sdb of=/dev/sdc
+</p>
+
+
+<p>
+Как записать Manjaro Linux на флешку в Linux:
+Самый простой способ записать Manjaro на флешку из терминала - это использовать утилиту dd. Команда будет выглядеть вот так:
+</p>
+
+<p>
+sudo dd bs=4M if=/путь/к/manjaro.iso of=/dev/sd[буква<sub>флешки</sub>] status=progress
+</p>
+
+<p>
+Например:
+</p>
+
+<p>
+sudo dd bs=4M if=~/Загрузки/manjaro.iso of=/dev/sdb status=progress
+</p>
+
+<p>
+Посмотреть какая буква диска присвоена вашей флешке вы можете с помощью утилиты fdisk:
+</p>
+
+<p>
+sudo fdisk -l
+</p>
+
+<p>
+Anarchy Linux:
+dd if=anarchy-{release}-x86<sub>64.iso</sub> of=/dev/sdX status=progress &amp;&amp; sync
+sudo dd if=./&lt;anarchy-image.iso&gt; of=/dev/sdx bs=4M status=progress oflag=sync
+</p>
+</div>
+</div>
+<div id="outline-container-org81a0c4f" class="outline-3">
+<h3 id="org81a0c4f"><span class="section-number-3">1.13</span> Монтирование флешек<sub>mount</sub></h3>
+<div class="outline-text-3" id="text-1-13">
+<p>
+Команды:
+sudo mkdir /media/flash
+sudo fdisk -l
+</p>
+
+<p>
+Команда монтирования флешки с ФС FAT16/32:
+sudo mount -t vfat /dev/sdXX /media/flash -o uid=1000,utf8
+или
+sudo mount /dev/sdXX /media/flash -o uid=1000,utf8
+или
+sudo mount -t vfat /dev/sdXX /media/flash -o uid=1000,gid=1000,utf8,dmask=027,fmask=137
+</p>
+
+<p>
+Команда монтирования флешки с ФС NTFS:
+</p>
+
+<p>
+sudo mount -t ntfs-3g /dev/sdXX /media/flash
+или
+sudo mount /dev/sdXX /media/flash
+</p>
+
+<p>
+где:
+/dev/sdXX - раздел, который необходимо примонтировать;
+/media/flash - папка, куда необходимо примонтировать раздел
+</p>
+
+<p>
+Размонтировать:
+</p>
+
+<p>
+sudo umount /dev/sdXX
+где:
+/dev/sdXX - раздел, который необходимо размонтировать
+</p>
+</div>
+</div>
+<div id="outline-container-org447e62b" class="outline-3">
+<h3 id="org447e62b"><span class="section-number-3">1.14</span> Монтирование ISO Образа в Linux</h3>
+<div class="outline-text-3" id="text-1-14">
+<p>
+Создадим точку монтирования:
+</p>
+
+<p>
+$ sudo mkdir -p /mnt/mount<sub>point</sub>
+</p>
+
+<p>
+Монтирование ISO Файла в Linux
+</p>
+
+<p>
+Смонтируем ISO файл /home/user/disk.iso в точку монтирования /mnt/mount<sub>point</sub>:
+</p>
+
+<p>
+$ sudo mount -o loop /home/user/disk.iso /mnt/mount<sub>point</sub>
+</p>
+
+<p>
+После того, как ISO образ диска будет смонтирован, Вы получите следующее сообщение: ‘mount: warning: /mnt/mount<sub>point</sub> seems to be mounted read-only‘.
+</p>
+
+<p>
+Можете спокойно его игнорировать, так как в соответствии со стандартом ISO 9660, ISO образы всегда монтируются только в режиме read-only (только чтение).
+Проверяем что ISO Файл Смонтирован
+</p>
+
+<p>
+Выведите список смонтированных устройств, чтобы убедиться что наш ISO образ успешно примонтировался:
+</p>
+
+<p>
+$ mount
+</p>
+
+<p>
+Внизу Вы должны увидеть строку на подобии следующей:
+</p>
+
+<p>
+/home/user/disk.iso on /mnt/mount<sub>point</sub> type iso9660 (ro)
+</p>
+
+<p>
+Теперь Вы можете перейти в точку монтирования и просмотреть файлы содержащиеся на ISO образе диска:
+</p>
+
+<p>
+$ cd /mnt/mount<sub>point</sub>
+$ ls -l
+</p>
+
+<p>
+Размонтирование ISO Файла в Linux
+</p>
+
+<p>
+Используйте следующую команду для размонтирования ISO образа диска:
+</p>
+</div>
+</div>
+<div id="outline-container-org53e1e4a" class="outline-3">
+<h3 id="org53e1e4a"><span class="section-number-3">1.15</span> enp1s0</h3>
+<div class="outline-text-3" id="text-1-15">
+<p>
+enp1s0
+</p>
+</div>
+</div>
+<div id="outline-container-org737956a" class="outline-3">
+<h3 id="org737956a"><span class="section-number-3">1.16</span> узнать свой ip</h3>
+<div class="outline-text-3" id="text-1-16">
+<p>
+ip addr show
+</p>
+</div>
+</div>
+<div id="outline-container-org510b25d" class="outline-3">
+<h3 id="org510b25d"><span class="section-number-3">1.17</span> date<sub>and</sub><sub>time</sub></h3>
+<div class="outline-text-3" id="text-1-17">
+<p>
+%a - день недели, сокращенное название;
+%A - день недели, полное название;
+%w - номер дня недели, от 0 до 6;
+%d - день месяца;
+%b - сокращенное название месяца;
+%B - полное название месяца;
+%m - номер месяца;
+%Y - номер года;
+%H - час дня в 24 часовом формате;
+%l - час дня в 12 часовом формате;
+%p - AM или PM;
+%M - минута;
+%S - секунда.
+</p>
+</div>
+</div>
+<div id="outline-container-org8f0c9c1" class="outline-3">
+<h3 id="org8f0c9c1"><span class="section-number-3">1.18</span> copy-paste xclip  xsel</h3>
+<div class="outline-text-3" id="text-1-18">
+<p>
+xclip  xsel  утилиты копирования из буфера и в буфер в x11
+</p>
+</div>
+</div>
+<div id="outline-container-orga71675d" class="outline-3">
+<h3 id="orga71675d"><span class="section-number-3">1.19</span> цвет фона терминала</h3>
+<div class="outline-text-3" id="text-1-19">
+<p>
+#002B36 - цвет фона терминала
+</p>
+</div>
+</div>
+<div id="outline-container-org7d4811c" class="outline-3">
+<h3 id="org7d4811c"><span class="section-number-3">1.20</span> youtube-dl</h3>
+<div class="outline-text-3" id="text-1-20">
+<p>
+youtube-dl есть в каталогах пакетов некоторых дистрибутивов Linux: sudo apt-get install youtube-dl, sudo yum install youtube-dl, sudo pacman -S youtube-dl 
+</p>
+
+<p>
+Итак, чтобы выкачать видео в максимальном разрешении и с наилучшим звуком, необходимо ввести команду вида 
+youtube-dl <a href="https://www.youtube.com/watch?v=miVRaoR_8xQ">https://www.youtube.com/watch?v=miVRaoR_8xQ</a>
+</p>
+
+<p>
+Скачивание плейлистов происходит аналогичным образом. Формат ссылки на плейлист — <a href="https://www.youtube.com/playlist?list=PL94A83DC128CC6B4B">https://www.youtube.com/playlist?list=PL94A83DC128CC6B4B</a>, то есть нужно зайти на главную страницу плейлиста. Осторожно: youtube-dl выкачает все видео в плейлисте.
+</p>
+
+<p>
+Скачивание плейлистов происходит аналогичным образом. Формат ссылки на плейлист — <a href="https://www.youtube.com/playlist?list=PL94A83DC128CC6B4B">https://www.youtube.com/playlist?list=PL94A83DC128CC6B4B</a>, то есть нужно зайти на главную страницу плейлиста. Осторожно: youtube-dl выкачает все видео в плейлисте.
+</p>
+
+<p>
+По флагу -F будут показаны все доступные форматы. Если ввести флаг -f с числовым кодом формата, он будет выкачан. Комбинация -f bestaudio выкачает аудио в лучшем формате.
+</p>
+
+
+<p>
+Помимо того, чтобы получить список всех доступных форматов видео, которое вы хотите загрузить с утилитой youtube-dl, необходимо использовать вариант &#x2013;list-formats, как показано ниже (пример):
+youtube-dl &#x2013;list-formats <a href="https://www.youtube.com/watch?v=ySzrJ4GRF7s">https://www.youtube.com/watch?v=ySzrJ4GRF7s</a>
+</p>
+
+<p>
+Я для примера выбрал формат под номером 18, с расширением mp4.Этот формат нужно добавить в команду после youtube-dl, как показано ниже в команде (пример):
+youtube-dl -f 18 <a href="https://www.youtube.com/watch?v=ySzrJ4GRF7s">https://www.youtube.com/watch?v=ySzrJ4GRF7s</a>
+</p>
+
+<p>
+Другие возможности утилиты youtube-dl, можно посмотреть в терминале, выполнив команду:
+youtube-dl &#x2013;help
+</p>
+
+<p>
+Для скачивания всего плейлиста, достаточно ввести ссылку на плейлист:
+</p>
+
+<p>
+$ youtube-dl -Acitf 18  <a href="http://www.youtube.com/playlist?list=%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0-%D0%BD%D0%B0-%D0%BF%D0%BB%D0%B5%D0%B9%D0%BB%D0%B8%D1%81%D1%82">http://www.youtube.com/playlist?list=ссылка-на-плейлист</a>
+</p>
+
+<p>
+-Acitf — это параметры, вот их расшифровка:
+</p>
+
+<p>
+-A — автонумерация.
+-с — в случае обрыва соединения, продолжит с момента обрыва, после повторного ввода команды в том же каталоге.
+-i — игнорирование ошибок.
+-t — назвать файл, так же как имя записи.
+-f 18 — выбор формата и качества (см. выше).
+</p>
+
+<p>
+Если нужен только аудио трек, тогда введем аргумент -х:
+</p>
+
+<p>
+$ youtube-dl -x <a href="http://www.ссылка-на-видео">http://www.ссылка-на-видео</a>
+</p>
+
+<p>
+автонумерация -(youtube-dlg)
+%(autonumber)s.%(title)s.%(ext)s
+</p>
+</div>
+</div>
+<div id="outline-container-org0cdd918" class="outline-3">
+<h3 id="org0cdd918"><span class="section-number-3">1.21</span> youtube-dll<sub>commands</sub></h3>
+<div class="outline-text-3" id="text-1-21">
+<p>
+Чтобы скачать нужное видео с YouTube достаточно выполнить команду в Терминале:
+youtube-dl ссылка<sub>на</sub><sub>видео</sub>
+Для выбора нужного видео формата и качества, используем параметр -F:
+youtube-dl -F ссылка<sub>на</sub><sub>видео</sub>
+Должны увидеть примерно такой вывод:
+</p>
+
+<p>
+youtube-dl -F <a href="https://www.youtube.com/watch?v=Pi4uQl_0T2w">https://www.youtube.com/watch?v=Pi4uQl_0T2w</a>
+[youtube] Setting language
+[youtube] Pi4uQl<sub>0T2w</sub>: Downloading webpage
+[youtube] Pi4uQl<sub>0T2w</sub>: Downloading video info webpage
+[youtube] Pi4uQl<sub>0T2w</sub>: Extracting video information
+[info] Available formats for Pi4uQl<sub>0T2w</sub>:
+format code extension resolution note
+171 webm audio only DASH webm audio , audio@ 48k (worst)
+140 m4a audio only DASH audio , audio@128k
+160 mp4 192p DASH video
+242 webm 240p DASH webm
+133 mp4 240p DASH video
+243 webm 360p DASH webm
+134 mp4 360p DASH video
+244 webm 480p DASH webm
+135 mp4 480p DASH video
+247 webm 720p DASH webm
+136 mp4 720p DASH video
+248 webm 1080p DASH webm
+137 mp4 1080p DASH video
+17 3gp 176×144
+36 3gp 320×240
+5 flv 400×240
+43 webm 640×360
+18 mp4 640×360
+22 mp4 1280×720 (best)
+</p>
+
+<p>
+Напротив формата имеется цифра, например 22 : mp4 1280×720 (best), именно ее нужно использовать для выбора качества, после параметра -f:
+</p>
+
+
+
+<p>
+youtube-dl -f 22 ссылка<sub>на</sub><sub>видео</sub>
+</p>
+
+<p>
+Чтобы скачать весь плейлист, нужно ввести ссылку на плейлист в команду:
+</p>
+
+<p>
+youtube-dl -f 22 <a href="https://www.youtube.com/channel/UCQBEHg0j6baNS1Lya-L4BJw">https://www.youtube.com/channel/UCQBEHg0j6baNS1Lya-L4BJw</a>
+</p>
+
+<p>
+Чтобы скачать видео в определенный каталог нужно зайти в эту директорию при помощи команды cd и выполнить команду для скачивания. Например:
+</p>
+
+<p>
+cd /home/user/save<sub>video</sub>
+</p>
+
+<p>
+youtube-dl -citw <a href="https://www.youtube.com/channel/UC9FSFwSIfqQkePaU">https://www.youtube.com/channel/UC9FSFwSIfqQkePaU</a>
+</p>
+
+<p>
+Основные параметры youtube-dl:
+</p>
+
+<p>
+-A — автонумерация.
+-с — если произойдет обрыв соединения, то утилита продолжит скачивание с момента обрыва, после повторного ввода команды в том же каталоге.
+-i — игнорировать ошибки.
+-t — присвоить имя файлу такое же как и имя записи.
+—audio-format — указать формат сохраняемого аудио файла (mp3, aac, wav, m4a, vorbis)
+—audio-quality — качество аудио файла. 0 (лучше), 9 (хуже) для VBR или конкретный битрейт, например 128K (по умолчанию 5)
+-f 22 — выбор формата и качества.
+-w — не перезаписывать файл.
+-s — симуляция скачивания. Файл не не скачивается и не сохраняется на жесткий диск.
+-x — используем, если нужно скачать только звук.
+-o — параметр указывает каталог для сохранения. По умолчанию программа скачивает в Домашнюю папку.
+-a — возможность скачать группу файлов из текстового файла. Адреса нужных видео файлов вписываете в текстовый файл в таком порядке:
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=JIrm0dHbCDU">https://www.youtube.com/watch?v=JIrm0dHbCDU</a>
+<a href="https://www.youtube.com/watch?v=diT3FvDHMyo">https://www.youtube.com/watch?v=diT3FvDHMyo</a>
+<a href="https://www.youtube.com/watch?v=Fy7FzXLin7o">https://www.youtube.com/watch?v=Fy7FzXLin7o</a>
+</p>
+
+<p>
+и сохраняем его в Домашнем каталоге присвоим имя, например, video.txt. Чтобы скачать весь этот список выполним команду:
+</p>
+
+<p>
+youtube-dl -a video.txt
+</p>
+
+<p>
+Чтобы скачать видео конкретного пользователя, в нашем случае BlackSilverUfa, выполним следующую команду:
+</p>
+
+<p>
+youtube-dl -citw ytuser:BlackSilverUfa
+</p>
+
+<p>
+Чтобы сохранить видео в нужный каталог используем ключ -P:
+</p>
+
+<p>
+wget -P /home/user/save <a href="https://www.youtube.com/playlist?list=PLG4Fqn_lntSq">https://www.youtube.com/playlist?list=PLG4Fqn_lntSq</a>
+</p>
+
+<p>
+Чтобы скачать в папку с названием Пользователя и оригинальным именем файлов, выполним:
+</p>
+
+<p>
+youtube-dl -ciw ytuser:UCBB7mGxCAfQYqLgqNukEbtg -o '%(uploader)s/%(title)s'
+</p>
+
+<p>
+Скачать и пронумеровать файлы с оригинальным названием в Домашнюю папку:
+</p>
+
+<p>
+youtube-dl -ciw ytuser:UCBB7mGxCAfQYqLgqNukEbtg -o '%(autonumber)s_%(title)s.%(ext)s' &#x2013;autonumber-size 2
+</p>
+
+<p>
+Скачать и пронумеровать файлы с оригинальным названием в каталог с именем Пользователя:
+</p>
+
+<p>
+youtube-dl -ciw ytuser:UCBB7mGxCAfQYqLgqNukEbtg -o '%(uploader)s/%(autonumber)s_%(title)s.%(ext)s' &#x2013;autonumber-size 2
+</p>
+
+<p>
+Скачать только звук:
+</p>
+
+<p>
+youtube-dl -x ytuser:UCBB7mGxCAfQYqLgqNukEbtg
+</p>
+
+<p>
+Скачать только звук в формате mp3 и в лучшем качестве VBR в каталог с именем Пользователя с нумерацией файлов:
+</p>
+
+<p>
+youtube-dl -ciw ytuser:UCBB7mGxCAfQYqLgqNukEbtg -x &#x2013;audio-format mp3 &#x2013;audio-quality 0 -o '%(uploader)s/%(autonumber)s_%(title)s.%(ext)s' &#x2013;autonumber-size 2
+</p>
+
+<p>
+Чтобы узнать все ключи и параметры утилиты выполните команду:
+</p>
+
+<p>
+man youtube-dl
+</p>
+
+<p>
+Команда для скачивания:
+youtube-dl -Aciw адрес с ютуба
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ad60ec" class="outline-3">
+<h3 id="org7ad60ec"><span class="section-number-3">1.22</span> wget</h3>
+<div class="outline-text-3" id="text-1-22">
+<p>
+Опции
+    -V (&#x2013;version) - вывести версию программы
+    -h (&#x2013;help) - вывести справку
+    -b (&#x2013;background) - работать в фоновом режиме
+    -o файл (&#x2013;out-file) - указать лог файл
+    -d (&#x2013;debug) - включить режим отладки
+    -v (&#x2013;verbose) - выводить максимум информации о работе утилиты
+    -q (&#x2013;quiet) - выводить минимум информации о работе
+    -i файл (&#x2013;input-file) - прочитать URL из файла
+    &#x2013;force-html - читать файл указанный в предыдущем параметре как html
+    -t (&#x2013;tries) - количество попыток подключения к серверу
+    -O файл (&#x2013;output-document) - файл в который будут сохранены полученные данные
+    -с (&#x2013;continue) - продолжить ранее прерванную загрузку
+    -S (&#x2013;server-response) - вывести ответ сервера
+    &#x2013;spider - проверить работоспособность URL
+    -T время (&#x2013;timeout) - таймаут подключения к серверу
+    &#x2013;limit-rate - ограничить скорость загрузки
+    -w (&#x2013;wait) - интервал между запросами
+    -Q (&#x2013;quota) - максимальный размер загрузки
+    -4 (&#x2013;inet4only) - использовать протокол ipv4
+    -6 (&#x2013;inet6only) - использовать протокол ipv6
+    -U (&#x2013;user-agent)- строка USER AGENT отправляемая серверу
+    -r (&#x2013;recursive)- рекурсивная работа утилиты
+    -l (&#x2013;level) - глубина при рекурсивном сканировании
+    -k (&#x2013;convert-links) - конвертировать ссылки в локальные при загрузке страниц
+    -P (&#x2013;directory-prefix) - каталог, в который будут загружаться файлы
+    -m (&#x2013;mirror) - скачать сайт на локальную машину
+    -p (&#x2013;page-requisites) - во время загрузки сайта скачивать все необходимые ресурсы
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<ol class="org-ol">
+<li>Загрузка файла</li>
+</ol>
+
+<p>
+Команда wget linux скачает один файл и сохранит его в текущей директории. Во время загрузки мы увидим прогресс, размер файла, дату его последнего изменения, а также скорость загрузки:
+</p>
+
+<p>
+wget <a href="http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz">http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz</a>
+</p>
+
+<ol class="org-ol">
+<li>Сохранить файл с другим именем</li>
+</ol>
+
+<p>
+Опция -О позволяет задать имя сохраняемому файлу, например, скачать файл wget с именем wget.zip:
+</p>
+
+<p>
+wget -O wget.zip <a href="http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz">http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz</a>
+</p>
+
+<ol class="org-ol">
+<li>Скачать несколько файлов</li>
+</ol>
+
+<p>
+Вы можете скачать несколько файлов одной командой даже по разным протоколам, просто указав их URL:
+</p>
+
+<p>
+wget <a href="http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz">http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz</a> <a href="ftp://ftp.gnu.org/gnu/wget/wget-1.10.1.tar.gz.sig">ftp://ftp.gnu.org/gnu/wget/wget-1.10.1.tar.gz.sig</a>
+</p>
+
+<ol class="org-ol">
+<li>Взять URL из файла</li>
+</ol>
+
+<p>
+Вы можете сохранить несколько URL в файл, а затем загрузить их все, передав файл опции -i. Например создадим файл tmp.txt, со ссылками для загрузки wget, а затем скачаем его:
+</p>
+
+<p>
+wget -i /wget/tmp.txt
+</p>
+
+<ol class="org-ol">
+<li>Продолжить загрузку</li>
+</ol>
+
+<p>
+Утилита wget linux рассчитана на работу в медленных и нестабильных сетях. Поэтому если вы загружали большой файл, и во время загрузки было потеряно соединение, то вы можете скачать файл wget с помощью опции -c.
+</p>
+
+<p>
+wget -c <a href="http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz">http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz</a>
+</p>
+
+<ol class="org-ol">
+<li>Загрузка файлов в фоне</li>
+</ol>
+
+<p>
+Опция -b заставляет программу работать в фоновом режиме, весь вывод будет записан в лог файл, для настройки лог файла используются специальные ключи wget:
+</p>
+
+<p>
+wget -b -o ~/wget.log <a href="http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz">http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz</a>
+</p>
+
+<ol class="org-ol">
+<li>Ограничение скорости загрузки</li>
+</ol>
+
+<p>
+Команда wget linux позволяет не только продолжать загрузку файлов, но и ограничивать скорость загрузки. Для этого есть опция &#x2013;limit-rate. Например ограничим скорость до 100 килобит:
+</p>
+
+<p>
+wget &#x2013;limit-rate=100k <a href="ftp://ftp.iinet.net.au/debian/debian-cd/8.4.0/amd64/iso-dvd/debian-8.4.0-amd64-DVD-1.iso">ftp://ftp.iinet.net.au/debian/debian-cd/8.4.0/amd64/iso-dvd/debian-8.4.0-amd64-DVD-1.iso</a>
+</p>
+
+<ol class="org-ol">
+<li>Загрузить и выполнить</li>
+</ol>
+
+<p>
+Вы, наверное, уже видели такие команды. wget позволяет сразу же выполнять скачанные скрипты:
+</p>
+
+<p>
+wget -O - <a href="http://сайт/%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82.sh">http://сайт/скрипт.sh</a> | bash
+</p>
+
+<p>
+Если опции -O не передать аргументов, то скачанный файл будет выведен в стандартный вывод, затем мы его можем перенаправить с интерпретатор bash, как показано выше.
+</p>
+<ol class="org-ol">
+<li>Сохранить файл в папке</li>
+</ol>
+
+<p>
+По умолчанию wget сохраняет файл в текущую папку, но это поведение очень легко изменить с помощью опции -P:
+</p>
+
+<p>
+wget -P ~/Downloads/ <a href="http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz">http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz</a>
+</p>
+
+<ol class="org-ol">
+<li>Скачать сайт</li>
+</ol>
+
+<p>
+Wget позволяет не только скачивать одиночные файлы, но и целые сайты, чтобы вы могли их потом просматривать в офлайне. Использование wget, чтобы скачать сайт в linux выглядит вот так:
+</p>
+
+<p>
+wget &#x2013;mirror -p &#x2013;convert-links -P ./&lt;Local-Folder&gt; аддресс<sub>сайт</sub>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+Чтобы скачать сайт целиком с помощью wget нужно выполнить команду:
+</p>
+
+<p>
+wget -r -k -l 7 -p -E -nc <a href="http://site.com/">http://site.com/</a>
+</p>
+
+<p>
+После выполнения данной команды в директорию site.com будет загружена локальная копия сайта <a href="http://site.com">http://site.com</a>. Чтобы открыть главную страницу сайта нужно открыть файл index.html.
+Рассмотрим используемые параметры:
+-r	—	указывает на то, что нужно рекурсивно переходить по ссылкам на сайте, чтобы скачивать страницы.
+-k	—	используется для того, чтобы wget преобразовал все ссылки в скаченных файлах таким образом, чтобы по ним можно было переходить на локальном компьютере (в автономном режиме).
+-p	—	указывает на то, что нужно загрузить все файлы, которые требуются для отображения страниц (изображения, css и т.д.).
+-l	—	определяет максимальную глубину вложенности страниц, которые wget должен скачать (по умолчанию значение равно 5, в примере мы установили 7). В большинстве случаев сайты имеют страницы с большой степенью вложенности и wget может просто «закопаться», скачивая новые страницы. Чтобы этого не произошло можно использовать параметр -l.
+-E	—	добавлять к загруженным файлам расширение .html.
+-nc	—	при использовании данного параметра существующие файлы не будут перезаписаны. Это удобно, когда нужно продолжить загрузку сайта, прерванную в предыдущий раз.
+</p>
+</div>
+</div>
+<div id="outline-container-org7c3a880" class="outline-3">
+<h3 id="org7c3a880"><span class="section-number-3">1.23</span> rsync</h3>
+<div class="outline-text-3" id="text-1-23">
+<p>
+cd /
+tar cvpzf mysysbackup.tgz &#x2013;exclude=/proc &#x2013;exclude=/lost+found &#x2013;exclude=/mysysbackup.tgz &#x2013;exclude=/media &#x2013;exclude=/home /
+</p>
+</div>
+</div>
+<div id="outline-container-org8f1fb7c" class="outline-3">
+<h3 id="org8f1fb7c"><span class="section-number-3">1.24</span> rsync1</h3>
+<div class="outline-text-3" id="text-1-24">
+<p>
+Некоторые общие параметры, используемые с командами rsync:
+</p>
+
+<p>
+-v: подробный вывод.
+-r: рекурсивно копирует данные (но не сохраняет временные метки и разрешения при передаче данных).
+-a: режим архива, позволяет рекурсивно копировать файлы, а также сохраняет символические ссылки, права доступа к файлам, права владения пользователей и групп и временные метки.
+-z: сжатие данных файла.
+-h: human-readable, информация на выводе в формате, удобном для чтения.
+</p>
+
+<p>
+Копирование/синхронизация файлов и локальный каталог
+Копирование/синхронизация файлов на локальном компьютере
+</p>
+
+<p>
+Следующая команда синхронизирует файл на локальном компьютере из одного места в другое. В этом примере, имя файла backup.tar необходимо скопировать или синхронизировать в папку <i>tmp/backups</i>:
+</p>
+
+<p>
+[root@sedicomm]# rsync -zvh backup.tar <i>tmp/backups</i>
+</p>
+
+<p>
+created directory /tmp/backups
+</p>
+
+<p>
+backup.tar
+</p>
+
+<p>
+sent 14.71M bytes received 31 bytes 3.27M bytes/sec
+</p>
+
+<p>
+total size is 16.18M speedup is 1.10
+</p>
+
+<p>
+В приведенном выше примере вы можете увидеть, что если место назначения еще не существует, rsync автоматически создаст каталог для такого места назначения.
+</p>
+
+<p>
+Копирование/синхронизация каталога на локальном компьютере
+</p>
+
+<p>
+Следующая команда перенесет или синхронизирует все файлы из одного каталога в другой на одном компьютере. В этом примере, в папке <i>root/rpmpkgs находятся некоторые файлы пакета rpm, и мы хотим, чтобы этот каталог был скопирован в папку /tmp/backups</i>:
+</p>
+
+<p>
+[root@sedicomm]# rsync -avzh <i>root/rpmpkgs /tmp/backups</i>
+</p>
+
+<p>
+sending incremental file list
+</p>
+
+<p>
+rpmpkgs/
+</p>
+
+<p>
+rpmpkgs/httpd-2.2.3-82.el5.centos.i386.rpm
+</p>
+
+<p>
+rpmpkgs/mod<sub>ssl</sub>-2.2.3-82.el5.centos.i386.rpm
+</p>
+
+<p>
+rpmpkgs/nagios-3.5.0.tar.gz
+</p>
+
+<p>
+rpmpkgs/nagios-plugins-1.4.16.tar.gz
+</p>
+
+<p>
+sent 4.99M bytes received 92 bytes 3.33M bytes/sec
+</p>
+
+<p>
+total size is 4.99M speedup is 1.00
+</p>
+
+
+<p>
+!!!Для начала, нам нужен резервный носитель (USB-флешка или внешний жесткий 
+диск). Далее нужно узнать имя диска, используя команду «fdisk -l». В моем случае 
+диск определился как /dev/sdb1. Теперь примонтируем наш резервный накопитель в 
+любое удобное место, я выбрал /mnt.
+</p>
+
+<p>
+$ sudo mount /dev/sdb1 /mnt
+</p>
+
+<p>
+Чтобы создать резервную копию всей системы, все, что вам нужно сделать, это 
+открыть терминал. Затем запустить в нем следующую команду от имени пользователя 
+root:
+</p>
+
+<p>
+$ sudo rsync -aAXvzh / &#x2013;exclude={"/home/*","/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} /mnt
+</p>
+
+<p>
+Эта команда создаст резервную копию всей корневой директории (/), исключая 
+директории /dev, /proc, /sys, /tmp, /run, /mnt, /media,  lost + found в папке / 
+mnt.
+</p>
+
+<p>
+Если вы хотите скопировать только измененные файлы, добавьте опцию -c
+</p>
+
+<p>
+    rsync — быстрая, универсальная, локальная и удаленная утилита копирования 
+файлов.
+    -aAXv — файлы передаются в режиме «архив», что гарантирует сохранение 
+символических ссылок, устройств, разрешений, владельцев, времени модификации, 
+списков ACL и расширенных атрибутов.
+    / — Исходный каталог.
+    —exclude — исключает заданные каталоги из резервной копии.
+    /mnt — это папка назначения резервного копирования.
+</p>
+
+<p>
+—include и —exclude, с помощью этих опций, можно делать исключения по копированию директорий или файлов
+Резервное копирование в Linux с помощью rsync
+</p>
+
+<p>
+rsync -zvra &#x2013;exclude=administrator/ <i>var/www/site root@IP:/backup</i>
+В данном случае мы исключили директорию “administrator” при копировании на удаленный сервер.
+</p>
+
+<p>
+Добавлением опции —include мы смогли задать фильтр по файлам, скопировали только файлы с расширением php.
+</p>
+
+<p>
+В своей рабое я часть использую rsync для автоматических задач резервного копирования в Linux. Можно написать простые bash скрипты или просто добавить команду rsync в cron и выполнять по расписанию.
+</p>
+
+<p>
+Например, можно добавить в cron команду:
+</p>
+
+<p>
+01 30 * * * rsync -zvra root@IP:/backup/ /backup
+</p>
+
+<p>
+В резульатате каждый день в 1-30 ночи, будет выполняться синхронизация каталогов локального и удаленного серверов.
+</p>
+</div>
+</div>
+<div id="outline-container-org0c981cd" class="outline-3">
+<h3 id="org0c981cd"><span class="section-number-3">1.25</span> terminal  rsync</h3>
+<div class="outline-text-3" id="text-1-25">
+<p>
+Некоторые общие параметры, используемые с командами rsync:
+</p>
+
+<p>
+-v: подробный вывод.
+-r: рекурсивно копирует данные (но не сохраняет временные метки и разрешения при передаче данных).
+-a: режим архива, позволяет рекурсивно копировать файлы, а также сохраняет символические ссылки, права доступа к файлам, права владения пользователей и групп и временные метки.
+-z: сжатие данных файла.
+-h: human-readable, информация на выводе в формате, удобном для чтения.
+</p>
+
+<p>
+Копирование/синхронизация файлов и локальный каталог
+Копирование/синхронизация файлов на локальном компьютере
+</p>
+
+<p>
+Следующая команда синхронизирует файл на локальном компьютере из одного места в другое. В этом примере, имя файла backup.tar необходимо скопировать или синхронизировать в папку <i>tmp/backups</i>:
+</p>
+
+<p>
+[root@sedicomm]# rsync -zvh backup.tar <i>tmp/backups</i>
+</p>
+
+<p>
+created directory /tmp/backups
+</p>
+
+<p>
+backup.tar
+</p>
+
+<p>
+sent 14.71M bytes received 31 bytes 3.27M bytes/sec
+</p>
+
+<p>
+total size is 16.18M speedup is 1.10
+</p>
+
+<p>
+В приведенном выше примере вы можете увидеть, что если место назначения еще не существует, rsync автоматически создаст каталог для такого места назначения.
+</p>
+
+
+<p>
+Копирование/синхронизация каталога на локальном компьютере
+</p>
+
+<p>
+Следующая команда перенесет или синхронизирует все файлы из одного каталога в другой на одном компьютере. В этом примере, в папке <i>root/rpmpkgs находятся некоторые файлы пакета rpm, и мы хотим, чтобы этот каталог был скопирован в папку /tmp/backups</i>:
+</p>
+
+<p>
+[root@sedicomm]# rsync -avzh <i>root/rpmpkgs /tmp/backups</i>
+</p>
+
+<p>
+sending incremental file list
+</p>
+
+<p>
+rpmpkgs/
+</p>
+
+<p>
+rpmpkgs/httpd-2.2.3-82.el5.centos.i386.rpm
+</p>
+
+<p>
+rpmpkgs/mod<sub>ssl</sub>-2.2.3-82.el5.centos.i386.rpm
+</p>
+
+<p>
+rpmpkgs/nagios-3.5.0.tar.gz
+</p>
+
+<p>
+rpmpkgs/nagios-plugins-1.4.16.tar.gz
+</p>
+
+<p>
+sent 4.99M bytes received 92 bytes 3.33M bytes/sec
+</p>
+
+<p>
+total size is 4.99M speedup is 1.00
+</p>
+</div>
+</div>
+<div id="outline-container-orge6f2b57" class="outline-3">
+<h3 id="orge6f2b57"><span class="section-number-3">1.26</span> xine</h3>
+<div class="outline-text-3" id="text-1-26">
+<p>
+0..9 - устанавливают просмотр на позицию 10%..90%
+    A - установить режим просмотра AUTO/16:9/4:3/DBV
+    Alt +c - вывести/спрятать окно настройки видео
+    F - переключение в широкоэкранный режим и обратно
+    G - убрать/показать графический интерфейс
+    H - тоже самое с окном воспроизведения (очень выручает, когда начальник входит)
+    Ctrl+m - включение/выключение звука
+    t - снять snapshot
+    Enter - воспроизведение
+    Пробел - пауза
+    вверх/вниз - увеличение/уменьшение скорости воспроизведения
+    &lt;/&gt; - увеличить/уменьшить размер
+    Alt+1[2,3] - установить размер окна воспроизведения равным 50%[100%,200%]
+    n/m - позволяют догнать видео/аудио при асинхронном воспроизведении
+    Q - выход 
+</p>
+</div>
+</div>
+<div id="outline-container-orgf21da50" class="outline-3">
+<h3 id="orgf21da50"><span class="section-number-3">1.27</span> Vimium C</h3>
+<div class="outline-text-3" id="text-1-27">
+<p>
+Vimium C-это расширение для браузера с открытым исходным кодом, которое обеспечивает клавиатурную навигацию по внутренней странице, Операции с вкладками браузера и расширенную панель поиска, так что вы можете в полной мере использовать преимущества своего браузера без мыши или сенсорной панели.
+</p>
+
+<p>
+Он поддерживает:
+ нажмите клавишу "f", чтобы подсказать все кликабельные элементы текущей веб-страницы
+ нажмите " o`, чтобы показать панель поиска ("Vomnibar", безопасный iframe) для поиска в вашей истории, закладках, открытых вкладках и настроенных поисковых системах, и вы даже можете удалить историю или вкладку, выбрав результат поиска и нажав Shift+Delete
+ нажмите j, k, h, l для прокрутки вниз/вверх/влево/вправо на веб-страницах
+ нажмите "/" для поиска текста; нажмите "v" для входа в визуальный режим (так же, как VIM)
+ нажмите Shift+J, Shift+K, `g0`, `g$`, чтобы переключиться на предыдущую/следующую/первую/последнюю вкладку
+ нажмите "x", чтобы удалить вкладку, и Shift+X, чтобы восстановить недавно закрытые вкладки (сеансы), и многие другие команды
+ повторение команды: например, нажатие кнопки `5X` (`5`, Shift+X) восстановит 5 последних закрытых вкладок
+ настройте сопоставления клавиш для привязки десятков команд Vimium C к другим последовательностям клавиш и добавьте опции для переключения поведения команд.
+ применяются списки запрещенных и разрешенных списков клавиш настраивается на специальных веб-сайтов и URL-адресов
+</p>
+
+<p>
+Он может скопировать любой выделенный текст, заголовок текущей вкладки и URL-адрес в системный буфер обмена, а также прочитать буфер обмена для поиска скопированного текста с помощью указанной поисковой системы.
+</p>
+
+<p>
+Он также может включать/отключать загрузку изображений веб-сайтов и даже выполнение JavaScript, если вы запускаете его команду "toggleCS". Эта функция требует разрешения "изменить настройки, которые контролируют доступ веб-сайтов к таким функциям, как файлы cookie, JavaScript&#x2026;", и Vimium C обещает, что он ничего не будет делать тайно, а только действовать в соответствии с тем, какие последовательности клавиш вы нажимаете.
+</p>
+
+<p>
+Он будет предоставлять 8 "глобальных" ярлыков браузера: createTab, previousTab, nextTab, reloadTab и некоторые другие, поэтому вы можете привязать к ним некоторые последовательности клавиш, и тогда эти команды будут работать даже тогда, когда страница не имеет фокуса (например, когда адресная строка браузера сфокусирована).
+</p>
+</div>
+</div>
+<div id="outline-container-org52e7326" class="outline-3">
+<h3 id="org52e7326"><span class="section-number-3">1.28</span> alsamixer</h3>
+<div class="outline-text-3" id="text-1-28">
+<p>
+Открыть микшер ALSA можно в терминале, введя команду alsamixer.выбрать нужную звуковую карту, нажав клавишу F6
+</p>
+</div>
+</div>
+<div id="outline-container-org5218c06" class="outline-3">
+<h3 id="org5218c06"><span class="section-number-3">1.29</span> Погода в терминале</h3>
+<div class="outline-text-3" id="text-1-29">
+<p>
+curl wttr.in/Петропавловск-Камчатский
+</p>
+</div>
+</div>
+<div id="outline-container-org9eb47f7" class="outline-3">
+<h3 id="org9eb47f7"><span class="section-number-3">1.30</span> Googler-googl in terminal</h3>
+<div class="outline-text-3" id="text-1-30">
+<p>
+Google - одна из лучших поисковых систем, используемая сегодня, и она знакома многим из нас. Вы можете использовать Googler для поиска в Google непосредственно из командной строки. Что мне действительно нравится в Googler, так это то, что он показывает результаты поиска без рекламы!
+</p>
+
+<p>
+Установка Гуглера
+Кроме того , вы должны будете иметь Python 3.5, а также xsel, xclip или termix-clipboard-set для того, чтобы иметь возможность скопировать URL - адрес в буфер обмена. Эти пакеты можно установить из диспетчера пакетов вашего дистрибутива, если они еще не установлены.
+</p>
+
+<p>
+Самый простой способ установить Googler заключается в следующем:
+</p>
+
+<p>
+sudo curl -o /usr/local/bin/googler <a href="https://raw.githubusercontent.com/jarun/googler/v4.0/googler">https://raw.githubusercontent.com/jarun/googler/v4.0/googler</a>
+sudo chmod +x /usr/local/bin/googler
+</p>
+
+
+<p>
+Использование Googler
+Использование Googler так же просто, как и ddgr. Чтобы что-то искать, просто введите, googler, а затем ваш поисковый запрос. Например, если бы я хотел узнать, что то, о Linux, я бы набрал следующее:
+</p>
+
+<p>
+googler linux
+</p>
+
+<p>
+Если вы хотите открыть конкретный результат, просто введите число, соответствующее результату поиска, и нажмите ввод. Для продвижения страницы результатов поиска вперед, введите n и нажмите Enter. Чтобы вернуться, введите p. Если вы хотите перейти на первую страницу результатов поиска по определенному поисковому запросу, введите f и нажмите Enter.
+</p>
+</div>
+</div>
+<div id="outline-container-org4c9d869" class="outline-3">
+<h3 id="org4c9d869"><span class="section-number-3">1.31</span> Calcurs-консольный календарь</h3>
+<div class="outline-text-3" id="text-1-31">
+<p>
+Calcurse — консольный календарь. С календарём Google не синхронизируется, но в остальном предоставляет неплохую функциональность. Позволяет создавать события и писать списки дел. Имеется в нём и система уведомлений.
+</p>
+
+<p>
+sudo apt install calcurse
+</p>
+
+<p>
+calcurse
+</p>
+</div>
+</div>
+<div id="outline-container-org55eefa1" class="outline-3">
+<h3 id="org55eefa1"><span class="section-number-3">1.32</span> Как вытянуть звук из видео файлов</h3>
+<div class="outline-text-3" id="text-1-32">
+<p>
+mkdir cash
+for f in *.avi *MOV *.mkv *.mp4 *.mpg ;
+do
+ffmpeg -i "\(f" -vn -ar 44100 -ac 2 -ab 192k -f mp3 cash/"\){f%.*}".mp3
+done
+В этой же папке появится директория Cash, в которой и будут находится извлеченные звуковые дорожки. Этот скрип можно применять к видео файлам, которые имеют следующие расширения: .avi, MOV, .mkv, .mp4 , .mpg. Кстати, проблема пробелов, в названии файлов, в данном скрипте решена.
+</p>
+
+<p>
+или 
+</p>
+
+<p>
+#!/bin/sh
+mkdir cash
+for f in *.avi *MOV *.mkv *.mp4 *.mpg ;
+do
+ffmpeg -i "\(f" -vn -ar 44100 -ac 2 -ab 64k -f mp3 cash/"\){f%.*}".mp3
+done
+</p>
+</div>
+</div>
+<div id="outline-container-orga68be2d" class="outline-3">
+<h3 id="orga68be2d"><span class="section-number-3">1.33</span> Конвертирование музыки в utf-8</h3>
+<div class="outline-text-3" id="text-1-33">
+<p>
+Конвертирование музыкальной библиотеки в кодировку utf-8.
+</p>
+
+<p>
+Для полного конвертирования всей музыкальной библиотеки будем использовать скрипт mid3iconv, который поставляется в комплекте пакета python-mutagen. Для правильной работы пакет python-mutagen должен быть версией не ниже 1.1.
+</p>
+
+<p>
+Устанавливаем пакет python-mutagen:
+Debian, Ubuntu, Kubuntu..:
+</p>
+
+<p>
+Переходим в директорию с Вашей музыкальной библиотекой:
+</p>
+
+<p>
+Возможно директория с музыкальной библиотекой у Вас будет другой.
+Конвертируем библиотеку:
+</p>
+</div>
+</div>
+<div id="outline-container-orgdd2c566" class="outline-3">
+<h3 id="orgdd2c566"><span class="section-number-3">1.34</span> mp3unicode</h3>
+<div class="outline-text-3" id="text-1-34">
+<p>
+mp3unicode
+*.mp3 это шаблон, для работы mp3unicode необходим пакет libtag (библиотека для работы с тегами).
+</p>
+
+<p>
+mp3unicode &#x2013;source-encoding cp1251 &#x2013;id3v1-encoding none &#x2013;id3v2-encoding unicode *.mp3
+</p>
+
+<p>
+Рекурсивная перекодировка каталога музыкальной коллекции, выполнить:
+</p>
+
+<p>
+find . -name "*.mp3" -exec mp3unicode -s cp1251 -2 unicode {} \;
+</p>
+</div>
+</div>
+<div id="outline-container-orgddda717" class="outline-3">
+<h3 id="orgddda717"><span class="section-number-3">1.35</span> net-tools<sub>ifconfig</sub></h3>
+<div class="outline-text-3" id="text-1-35">
+<p>
+Набор утилит net-tools считается устаревшим, рекомендуется использовать вместо него пакет iproute2
+</p>
+
+<p>
+ifconfig-старая команда 	ip address,ip link-новая команда
+</p>
+</div>
+</div>
+<div id="outline-container-org3ebb7e9" class="outline-3">
+<h3 id="org3ebb7e9"><span class="section-number-3">1.36</span> Чистим систему</h3>
+<div class="outline-text-3" id="text-1-36">
+<p>
+sudo apt-get autoclean
+рекомендуется делать эту команду периодически, очищая систему от .deb пакетов, которые более не нужны,
+</p>
+
+<p>
+sudo apt-get autoremove
+данная команда удаляет неудалённые зависимости от уже удалённых пакетов,
+</p>
+
+<p>
+sudo apt-get clean
+очистка каталога <i>var/cache/apt/archives</i> .
+</p>
+</div>
+</div>
+<div id="outline-container-org95f0608" class="outline-3">
+<h3 id="org95f0608"><span class="section-number-3">1.37</span> проба оборудования(в Rosa)</h3>
+<div class="outline-text-3" id="text-1-37">
+<p>
+sudo -E hw-probe -all -upload 
+</p>
+</div>
+</div>
+<div id="outline-container-orga52ee9e" class="outline-3">
+<h3 id="orga52ee9e"><span class="section-number-3">1.38</span> Converting video and audio ffmpeg</h3>
+<div class="outline-text-3" id="text-1-38">
+<p>
+ffmpeg -i input.mp4 output.avi
+</p>
+</div>
+</div>
+<div id="outline-container-orga579892" class="outline-3">
+<h3 id="orga579892"><span class="section-number-3">1.39</span> Вывод систем.ошибок in log file</h3>
+<div class="outline-text-3" id="text-1-39">
+<p>
+dmesg  &gt; dmesg.txt
+</p>
+
+<p>
+journalctl  &gt;  journalctl.txt
+</p>
+
+<p>
+systemctl status NetworkManager
+</p>
+
+<p>
+systemctl list-unit-files
+</p>
+
+<p>
+Получение информации о текущих целях
+</p>
+
+<p>
+В systemd для этого предназначена следующая команда (заменяющая runlevel):
+</p>
+
+<p>
+$ systemctl list-units &#x2013;type=target
+</p>
+</div>
+</div>
+<div id="outline-container-orgf982928" class="outline-3">
+<h3 id="orgf982928"><span class="section-number-3">1.40</span> Дата и время установки ОС Linux</h3>
+<div class="outline-text-3" id="text-1-40">
+<p>
+Дата и время установки ОС Linux из свойств файловой системы
+Для этого, необходимо выполнить данную команду с root правами:
+</p>
+
+<p>
+sudo tune2fs -l $(df / | tail -1 | cut -f1 -d' ') | grep created
+</p>
+
+<p>
+В итоге мы должны получить что то вроде этого:
+</p>
+</div>
+</div>
+<div id="outline-container-org32941da" class="outline-3">
+<h3 id="org32941da"><span class="section-number-3">1.41</span> узнать сетевую карту</h3>
+<div class="outline-text-3" id="text-1-41">
+<p>
+Перед тем как работать с сетью, иногда (а лучше всегда) необходимо узнать какая сетевая карта установлена в системе, например решать вопросы совместимости довольно трудно не зная модель сетевой карты. Проще всего использовать для этого утилиту lshw. Установим её и запустим:
+</p>
+
+<p>
+sudo pacman -S lshw 
+sudo lshw -C network 
+</p>
+</div>
+</div>
+<div id="outline-container-org203b066" class="outline-3">
+<h3 id="org203b066"><span class="section-number-3">1.42</span> все подключения инета</h3>
+<div class="outline-text-3" id="text-1-42">
+<p>
+sudo pacman -S tcptrack
+sudo tcptrack -i enp1s0
+узнать все подключения
+</p>
+</div>
+</div>
+<div id="outline-container-orgd41fde2" class="outline-3">
+<h3 id="orgd41fde2"><span class="section-number-3">1.43</span> touch<sub>создать</sub> файл</h3>
+<div class="outline-text-3" id="text-1-43">
+<p>
+Чтобы создать пустой файл Linux, просто наберите:
+touch файл.txt
+</p>
+</div>
+</div>
+<div id="outline-container-org34637bc" class="outline-3">
+<h3 id="org34637bc"><span class="section-number-3">1.44</span> Команда cp<sub>создать</sub> файл</h3>
+<div class="outline-text-3" id="text-1-44">
+<p>
+Команда cp используется для копирования файлов в Linux. Но с её помощью можно и создать файл. Например, чтобы создать пустой файл, можно просто скопировать /dev/null:
+</p>
+
+<p>
+cp /dev/null файл
+</p>
+</div>
+</div>
+<div id="outline-container-orgc12bfdb" class="outline-3">
+<h3 id="orgc12bfdb"><span class="section-number-3">1.45</span> список всех пакетов в файл</h3>
+<div class="outline-text-3" id="text-1-45">
+<p>
+sudo dpkg - -get-selections "*" &gt; /home/user/my<sub>packages.txt</sub>
+— список всех пакетов в файл
+</p>
+
+<p>
+установка пакетов из полученного файла —&#x2014;»
+sudo dpkg - -set-selections &lt; /home/user/my<sub>packages.txt</sub>
+sudo apt-get -u dselect-upgrade
+</p>
+</div>
+</div>
+<div id="outline-container-org4e9b9e4" class="outline-3">
+<h3 id="org4e9b9e4"><span class="section-number-3">1.46</span> Как в Linux вывести список установленных пакетов</h3>
+<div class="outline-text-3" id="text-1-46">
+<p>
+Для RPM пакетов
+</p>
+
+<p>
+Для дистрибутивов, использующих RPM пакеты (CentOS, OpenSUSE, Fedora и другие), выполните следующую команду:
+</p>
+
+<p>
+rpm -qa &#x2013;queryformat '%10{size} - %-25{name} \t %{version} \t %{os} \n' | sort -rh | head -30 | awk '{print $1/1024/1024, $2, $3, $4}'
+</p>
+</div>
+</div>
+<div id="outline-container-orgf070264" class="outline-3">
+<h3 id="orgf070264"><span class="section-number-3">1.47</span> Команды обновления системы(debian&#x2026;)</h3>
+<div class="outline-text-3" id="text-1-47">
+<p>
+$ sudo apt update 
+$ sudo apt upgrade
+$ sudo apt dist-upgrade
+</p>
+
+<p>
+$ sudo apt autoremove
+</p>
+
+<p>
+$ sudo do-release-upgrade -d
+</p>
+</div>
+</div>
+<div id="outline-container-orgb91b75a" class="outline-3">
+<h3 id="orgb91b75a"><span class="section-number-3">1.48</span> Удаление программ</h3>
+<div class="outline-text-3" id="text-1-48">
+<p>
+В Ubuntu, Debian, Linux Mint и других дистрибутивах этого семейства команда будет выглядеть вот так:
+</p>
+
+<p>
+sudo apt remove firefox
+</p>
+
+<p>
+Эта команда удалит пакет из системы, но некоторые конфигурационные файлы останутся и будут занимать место. Чтобы полностью удалить программу используйте опцию purge:
+</p>
+
+<p>
+sudo apt purge firefox
+</p>
+
+<p>
+А чтобы, также удалить зависимости, установленные вместе с пакетом, нужно после одной из предыдущих команд выполнить:
+</p>
+
+<p>
+sudo apt-get autoremove
+</p>
+
+
+<p>
+Удаление программы на Ubuntu 16.04 с помощью команды 
+1.) dpkg &#x2013;list     - проверить список установленных программ
+2.) sudo apt-get &#x2013;purge remove имя<sub>программы</sub>    - удалить программу и файлы настроек
+3.) sudo apt-get remove имя<sub>программы</sub>     - удалить только саму программу
+</p>
+</div>
+</div>
+<div id="outline-container-orgeb4eeea" class="outline-3">
+<h3 id="orgeb4eeea"><span class="section-number-3">1.49</span> компиляция программ из исходников</h3>
+<div class="outline-text-3" id="text-1-49">
+<p>
+Установить программное обеспечение из исходного кода:
+</p>
+
+<p>
+tar zxvf [source<sub>code.tar.gz</sub>]
+cd [source<sub>code</sub>]
+./configure
+make
+make install
+</p>
+</div>
+</div>
+<div id="outline-container-orgaab379c" class="outline-3">
+<h3 id="orgaab379c"><span class="section-number-3">1.50</span> Сборка пакетов из исходников</h3>
+<div class="outline-text-3" id="text-1-50">
+<p>
+Создать кваталог ~/.build и перейти в него.
+</p>
+
+<p>
+mkdir ~/.build &amp;&amp; cd ~/.build
+</p>
+
+<p>
+Найти нужный пакет на сайте aur.archlinux.org и загрузить snapshot.
+</p>
+
+<p>
+wget <a href="https://aur.archlinux.org/cgit/aur.git/snapshot/gtk3-mushrooms.tar.gz">https://aur.archlinux.org/cgit/aur.git/snapshot/gtk3-mushrooms.tar.gz</a>
+</p>
+
+<p>
+Распаковываем, переходим в каталог, собираем пакет и устанавливаем.
+</p>
+
+<p>
+tar -xvzf gtk3-mushrooms.tar.gz
+cd gtk3-mushrooms
+makepkg -sri
+</p>
+
+<p>
+Если вылазят ошибки ключей, можно проигнорировать.
+</p>
+
+<p>
+makepkg -s &#x2013;skippgpcheck
+</p>
+
+<p>
+После сборки появится пакет с расширением имя.pkg.tar.xz Установить командой.
+</p>
+
+<p>
+sudo pacman -U имя.pkg.tar.xz
+</p>
+</div>
+</div>
+<div id="outline-container-org79b8e01" class="outline-3">
+<h3 id="org79b8e01"><span class="section-number-3">1.51</span> Скорость интернета</h3>
+<div class="outline-text-3" id="text-1-51">
+<p>
+Узнать скорость интернета не выходя из терминала можно узнать командой:
+speedtest-cli
+</p>
+</div>
+</div>
+<div id="outline-container-orgc572069" class="outline-3">
+<h3 id="orgc572069"><span class="section-number-3">1.52</span> найти IP-адрес сервера в терминале</h3>
+<div class="outline-text-3" id="text-1-52">
+<p>
+$ curl ifconfig.co
+$ curl ifconfig.me
+$ curl icanhazip.com
+</p>
+
+<p>
+120.88.41.175
+</p>
+
+<p>
+ wget -qO- <a href="http://ipecho.net/plain">http://ipecho.net/plain</a> | xargs echo
+$ wget -qO - icanhazip.com
+</p>
+
+<p>
+120.88.41.175
+</p>
+</div>
+</div>
+<div id="outline-container-org52cd941" class="outline-3">
+<h3 id="org52cd941"><span class="section-number-3">1.53</span> Автоматический вход в систему</h3>
+<div class="outline-text-3" id="text-1-53">
+<p>
+SDDM поддерживает автоматический вход. Для этого настройте конфигурационный файл, например:
+</p>
+
+<p>
+/etc/sddm.conf.d/autologin.conf
+</p>
+
+<p>
+[Autologin]
+User=ivan
+Session=plasma.desktop
+</p>
+
+<p>
+Эта конфигурация позволит автоматически запускать KDE Plasma для пользователя ivan при загрузке системы. Все доступные сеансы доступны в директории <i>usr/share/xsessions</i>. 
+</p>
+</div>
+</div>
+<div id="outline-container-org19722b3" class="outline-3">
+<h3 id="org19722b3"><span class="section-number-3">1.54</span> Быстрое выключение компа in xfce</h3>
+<div class="outline-text-3" id="text-1-54">
+<p>
+xfce4-session-logout -h
+</p>
+</div>
+</div>
+<div id="outline-container-org147c5c8" class="outline-3">
+<h3 id="org147c5c8"><span class="section-number-3">1.55</span> подключение смартфона</h3>
+<div class="outline-text-3" id="text-1-55">
+<p>
+gvfs-mtp установлен, Samsung видит
+</p>
+
+<p>
+Для файловых менеджеров, которые используют GVFS (GNOME Files, Xfce's Thunar), установите gvfs-mtp для поддержки MTP и gvfs-gphoto2 для поддержки PTP.
+Для файловых менеджеров, которые используют KIO (KDE's Dolphin), установите kio-mtp[ссылка недействительна: сохранено в aur-mirror] (поддержка PTP уже включена в него).
+</p>
+
+<p>
+Также существует альтернатива плагинам: минималистичный MTP клиент android-file-transfer. 
+</p>
+
+<p>
+Примечание: Если у вас более новое Android устройство, которое не поддерживает UMS (USB-накопитель) и вы считаете что mtpfs очень медленный или работает некорректно, то вы можете установить jmtpfsAUR из AUR.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf4de960" class="outline-3">
+<h3 id="orgf4de960"><span class="section-number-3">1.56</span> сведения о компьютере</h3>
+<div class="outline-text-3" id="text-1-56">
+<p>
+sudo lshw
+sudo lshw -short
+</p>
+
+<p>
+Немного дополним предыдущую команду.
+sudo lshw -html &gt; system<sub>info.html</sub>
+</p>
+
+<p>
+И в домашней директории появился файл system<sub>info.html</sub>, который мы сможем просмотреть в любом интернет браузере.
+</p>
+</div>
+</div>
+<div id="outline-container-org0c85bbb" class="outline-3">
+<h3 id="org0c85bbb"><span class="section-number-3">1.57</span> иксы и minimalde</h3>
+<div class="outline-text-3" id="text-1-57">
+<p>
+Ставим иксы и драйвера
+</p>
+
+<p>
+#Установим  Х (Иксы) и свободные драйвера + читаем зависимости при необходимости ставим их тоже
+pacman -S xorg-server xorg-drivers
+</p>
+
+<p>
+Установка
+</p>
+
+<p>
+MATE доступен в официальных репозиториях и может быть установлен одним из следующих способов:
+</p>
+
+<p>
+Пакет mate-panel предоставляет минимальное окружение рабочего стола.
+Группа пакетов mate содержит основное рабочее окружение и приложения, необходимые для стандартной работы MATE
+Группа пакетов mate-extra содержит различные необязательные инструменты, которые хорошо работают в MATE. Заметьте, что установка только группы пакетов mate-extra не вытянет всю группу mate зависимостями: если вы действительно хотите всё, вы должны установить обе группы
+</p>
+
+
+<p>
+Установка
+KDE Plasma
+Примечание: Перед тем, как устанавливать KDE Plasma, убедитесь, что в вашей системе установлен и настроен сервер Xorg.
+</p>
+
+<p>
+Установите мета-пакет plasma-meta или группу пакетов plasma. Для получения информации о различиях между ними смотрите статью Группа пакетов.
+</p>
+
+<p>
+Если вам нужна более минималистичная Plasma (с меньшим количеством установленных пакетов и приложений), установите пакет plasma-desktop.
+</p>
+
+<p>
+Для поддержки Wayland также требуется установить пакет plasma-wayland-session.
+Приложения KDE
+</p>
+
+<p>
+Чтобы установить все приложения KDE (KDE Applications), установите группу пакетов kde-applications или мета-пакет kde-applications-meta. Обратите внимание, что установятся только Приложения KDE, а не среда рабочего стола KDE Plasma. 
+</p>
+
+
+
+<p>
+Установка
+</p>
+
+<p>
+LXDE модульный и вы можете выбирать только те пакеты, которые вам нужны.
+</p>
+
+<p>
+Минимально необходимые пакеты для запуска LXDE: lxde-common, lxsession, desktop-file-utils и оконный менеджер.
+</p>
+
+<p>
+Вы можете установить группу пакетов LXDE:
+</p>
+
+<p>
+Установятся следующие пакеты:
+</p>
+
+<p>
+gpicview: Простой и легкий просмоторщик изображений
+libfm: Библиотека для работы с файлами (lxshortcut: Простое средство редактирования ярлычков)
+lxappearance: Редактор тем для изменения GTK+ тем, иконок и шрифтов для приложений GTK
+lxappearance-obconf: Плагин для настройки Openbox через LXAppearance
+lxde-common: Установки по умолчанию конфигурационных файлов для большинства интегрированных компонентов LXDE
+lxde-icon-theme: Тема значков LXDE
+lxdm: Легковесный менеджер дисплея приветствия
+lxinput: Конфигурационная утилита для клавиатуры и мышки в LXDE
+lxlauncher: Панель запуска приложений для нетбуков
+lxmenu-data: Коллекция файлов адаптирующая меню LXDE под стандарты спецификации freedesktop.org
+lxmusic: Минималистичный проигрыватель музыки базирующийся на xmms2
+lxpanel: Панель задач с менеджером приложений, меню программ и апплетов
+lxrandr: Менеджер экрана для LXDE
+lxsession: Совместимый X11 менеджер сессий с поддержкой выключения, перезагрузки и ждущего режима
+lxtask: Диспетчер задач и системный монитор LXDE
+lxterminal: Стандартный эмулятор терминала для LXDE
+menu-cache: Механизм кеширования для freedesktop.org-совместимых меню
+openbox: Легкий и удобно конфигурируемый менеджер окон (рекомендуемый менеджер, разработанный вне проекта LXDE).
+pcmanfm: Файловый менеджер, функционал рабочего стола и обоев
+</p>
+
+<p>
+Вам также следует установить Gamin. Gamin - это инструмент для отслеживания изменений в файлах и директориях, который является реализацией подсистемы FAM. Запуск производится по требованию программ, которые им поддерживаются, поэтому не требуется отдельно демона, подобного FAM. Если у Вас установлен FAM - удалите запуск этого демона из /etc/rc.conf и остановите его перед установкой Gamin
+</p>
+
+<p>
+pacman -S gamin
+</p>
+
+<p>
+Другие легковесные приложения, которые рекомендуется использовать на слабых системах:
+</p>
+
+<p>
+leafpad: Простой и легкий текстовый редактор
+mousepad: Простой текстовый редактор (является текстовым редактором по умолчанию среды Xfce)
+xarchiver: Легкий архиватор
+obconf: Инструмент для настройки тем и стилей Openbox
+</p>
+</div>
+</div>
+<div id="outline-container-org0739184" class="outline-3">
+<h3 id="org0739184"><span class="section-number-3">1.58</span> команды из консоли(файловые менеджеры)</h3>
+<div class="outline-text-3" id="text-1-58">
+<p>
+В дебе пользую apt-get, в Росе urpmi, в арче pacman
+</p>
+</div>
+</div>
+<div id="outline-container-org03529d6" class="outline-3">
+<h3 id="org03529d6"><span class="section-number-3">1.59</span> Установка deb пакета через терминал</h3>
+<div class="outline-text-3" id="text-1-59">
+<p>
+то есть, для установки deb пакета через терминал нужно использовать конструкцию:
+	sudo dpkg -i имя<sub>пакета.deb</sub>
+</p>
+</div>
+</div>
+<div id="outline-container-org62883c8" class="outline-3">
+<h3 id="org62883c8"><span class="section-number-3">1.60</span> Как узнать версию Debian</h3>
+<div class="outline-text-3" id="text-1-60">
+<ol class="org-ol">
+<li>Краткое наименование дистрибутива. Выясняется командой:</li>
+</ol>
+
+<p>
+Debian GNU/Linux jessie/sid
+</p>
+
+<ol class="org-ol">
+<li>Полная информация о дистрибутиве:</li>
+</ol>
+
+<p>
+No LSB modules are available.
+</p>
+
+<p>
+Distributor ID: Debian
+</p>
+
+<p>
+Description:    Debian GNU/Linux testing (jessie)
+</p>
+
+<p>
+Release:        testing
+</p>
+
+<p>
+Codename:       jessie
+</p>
+
+<ol class="org-ol">
+<li>Архитектура (разрядность) дистрибутива</li>
+</ol>
+
+<p>
+i686
+</p>
+
+<ol class="org-ol">
+<li>Версия ядра</li>
+</ol>
+
+<p>
+Linux pangolinux 3.2.0-4-686-pae #1 SMP Debian 3.2.32-1 i686 GNU/Linux
+</p>
+
+<ol class="org-ol">
+<li>Узнать каким компилятором было собрано ядро:</li>
+</ol>
+
+<p>
+Linux version 3.2.0-4-686-pae (debian-kernel@lists.debian.org) (gcc version 4.6.3 (Debian 4.6.3-12) ) #1 SMP Debian 3.2.32-
+</p>
+
+<ol class="org-ol">
+<li>Информация о версии дистрибутива, записанная разработчиками:</li>
+</ol>
+
+<p>
+PRETTY<sub>NAME</sub>="Debian GNU/Linux jessie/sid"
+</p>
+
+<p>
+NAME="Debian GNU/Linux"
+</p>
+
+<p>
+ID=debian
+</p>
+
+<p>
+HOME<sub>URL</sub>="<a href="http://www.debian.org/">http://www.debian.org/</a>"
+</p>
+
+<p>
+SUPPORT<sub>URL</sub>="<a href="http://www.debian.org/support/">http://www.debian.org/support/</a>"
+</p>
+
+<p>
+BUG<sub>REPORT</sub><sub>URL</sub>="<a href="https://bugs.debian.org/">https://bugs.debian.org/</a>"
+</p>
+
+<ol class="org-ol">
+<li>Краткая информация о версии Debian, из специально предназначенного для этого файла:</li>
+</ol>
+
+<p>
+jessie/sid
+</p>
+</div>
+</div>
+<div id="outline-container-org3895230" class="outline-3">
+<h3 id="org3895230"><span class="section-number-3">1.61</span> узнать размер папки</h3>
+<div class="outline-text-3" id="text-1-61">
+<p>
+Для того, чтобы узнать размер папки, используйте команду:
+</p>
+
+<p>
+du -sh  - размер текущей папки
+</p>
+
+<p>
+du -sh /путь/к/папке
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7ac8d6" class="outline-3">
+<h3 id="orgc7ac8d6"><span class="section-number-3">1.62</span> узнать размер файла</h3>
+<div class="outline-text-3" id="text-1-62">
+<p>
+du -h /путь<sub>к</sub><sub>файлу</sub>/имя файла
+</p>
+
+<p>
+du -h ./имя файла  - если файл находится в той же папке, в которой вы находитесь
+</p>
+</div>
+</div>
+<div id="outline-container-org665c766" class="outline-3">
+<h3 id="org665c766"><span class="section-number-3">1.63</span> как узнать uuid диска linux</h3>
+<div class="outline-text-3" id="text-1-63">
+<p>
+как узнать uuid диска linux
+</p>
+
+<p>
+ls -la <i>dev/disk/by-uuid</i>
+</p>
+
+<p>
+Ещё один вариант - эту утилита lsblk, которая тоже может показывать UUID:
+</p>
+
+<p>
+lsblk -o +uuid,name
+</p>
+
+<p>
+ls -l <i>dev/disk/by-uuid</i>
+</p>
+</div>
+</div>
+<div id="outline-container-org64bf132" class="outline-3">
+<h3 id="org64bf132"><span class="section-number-3">1.64</span> узнать размер диска<sub>dev</sub>-sda</h3>
+<div class="outline-text-3" id="text-1-64">
+<p>
+Узнать размер диска, занятое и свободное место
+</p>
+
+<p>
+df -ah
+</p>
+</div>
+</div>
+<div id="outline-container-org6843907" class="outline-3">
+<h3 id="org6843907"><span class="section-number-3">1.65</span> Узнать свою видеокарту</h3>
+<div class="outline-text-3" id="text-1-65">
+<p>
+lspci -vnn | grep VGA -A 12
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2021-04-14 Ср 17:26</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

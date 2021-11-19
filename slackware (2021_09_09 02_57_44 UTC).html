@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-06-26 Сб 17:23 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Оглавление</h2>
+<div id="table-of-contents">
+<ul>
+<li><a href="#org4aea8eb">1. slackware</a>
+<ul>
+<li><a href="#org35082fe">1.1. Slackware(настройка сразу после установки)</a></li>
+<li><a href="#org82bd6bd">1.2. slackdoc  (https://docs.slackware.com/)</a></li>
+<li><a href="#orgb099643">1.3. Для про­сто­го и быст­ро­го об­нов­ле­ния Ва­ше­го Slackware:</a></li>
+<li><a href="#orgc6eab86">1.4. rus-slack</a></li>
+<li><a href="#org6e9482b">1.5. sbopkg</a></li>
+<li><a href="#org740de31">1.6. slackbuilds.org</a></li>
+<li><a href="#org19fd899">1.7. slackware<sub>prog</sub></a></li>
+<li><a href="#orgee28ab1">1.8. xfce4-&#x2026;-plugin</a></li>
+<li><a href="#org78a028f">1.9. выбор оконного менеджера</a></li>
+<li><a href="#orgb3babac">1.10. Установка программ из архивов(txz)</a></li>
+<li><a href="#org8ad7c0b">1.11. Обновление slackware сразу после установки</a></li>
+<li><a href="#org002bfb9">1.12. для настройки KDE5 под администратором</a></li>
+<li><a href="#org19ca9cb">1.13. Как избавиться от тиринга при использовании видеокарты INTEL</a></li>
+<li><a href="#orgfdec2a3">1.14. Вменяемое отображение шрифтов в Java-приложениях</a></li>
+<li><a href="#orgb2c1aa9">1.15. Если тиринг только в firefox</a></li>
+<li><a href="#org24b5cb7">1.16. Восстановление загрузчика lilo</a></li>
+</ul>
+</li>
+<li><a href="#org0eee43d">2. Чтобы нашему юзеру не было грустно, по инерции редактируем /etc/sudoers.</a></li>
+<li><a href="#org176c905">3. Теперь самое время научиться стартовать сессию Xorg от имени пользователя и делать это автоматически.</a></li>
+<li><a href="#org537d096">4. slackpkg</a></li>
+<li><a href="#org8846362">5. Руссификация Slackware 14</a></li>
+<li><a href="#org8f1e309">6. Локализация KDE 4.14.3 (slackware 14.2)-KDE 4.12.5(slackware 14.1)</a></li>
+<li><a href="#orgeb502f8">7. Как установить пакет *.txz</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4aea8eb" class="outline-2">
+<h2 id="org4aea8eb"><span class="section-number-2">1</span> slackware</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org35082fe" class="outline-3">
+<h3 id="org35082fe"><span class="section-number-3">1.1</span> Slackware(настройка сразу после установки)</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+1.При первой загрузке вводим имя пользователя(доступен только root)
+2.Пароль,который задали при установке
+3.И наконец вводим startx &gt; Enter.Все загружается система.
+4.После загрузки добавляем пользователя и пароль пользователя: 
+adduser &gt; Enter &gt; name user
+5.Если нужно добавляем sudo:
+nano /etc/sudoers
+В указанном файле отыскивается строка
+</p>
+
+<p>
+С коей и снимается символ комментария. При желании совсем облегчить себе жизнь та же процедура проделывается со строкой
+</p>
+
+<p>
+6.Перезагрузка:
+Вводим имя пользователя,пароль и startx
+7.После загрузки системы добовляем репозиторий для обновлений:
+nano /etc/slackpkg/mirrosr
+Раскомментируем ОДНО зеркало в nano <i>etc/slackpkg/mirrors
+(к примеру: <a href="http://mirrors.skackware.com/slackware/slackware-14.2">http://mirrors.skackware.com/slackware/slackware-14.2</a></i>
+Сохраняем:Ctrl+O &gt; Enter &gt; Ctrl+X
+Далее обновлямся под рутом: slackpkg update и slackpkg upgrade-all(снимаем галочки в пунктах,где первым идет слово kernel - их 6 пункта.Иначе могут быть ошибки.
+8.Далее кому нужно русифицируем:
+nano /etc/profile.d/lang.sh
+Пример как должно быть:
+#!/bin/sh
+</p>
+
+<p>
+export LANG=ru<sub>RU.UTF</sub>-8
+</p>
+
+<p>
+Сохраняем:Ctrl+O &gt; Enter &gt; Ctrl+X
+</p>
+
+<p>
+и еще:
+nano /etc/profile.d/lang.csh
+должно быть:
+#!/bin/csh
+</p>
+
+<p>
+#setenv LANG en<sub>US</sub>
+setenv LANG ru<sub>RU.UTF</sub>-8
+</p>
+
+<p>
+Сохраняем:Ctrl+O &gt; Enter &gt; Ctrl+X
+</p>
+
+<p>
+Reoot(перезагрузка)
+</p>
+</div>
+</div>
+<div id="outline-container-org82bd6bd" class="outline-3">
+<h3 id="org82bd6bd"><span class="section-number-3">1.2</span> slackdoc  (<a href="https://docs.slackware.com/">https://docs.slackware.com/</a>)</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Логин: jenit777
+Пароль: fekbabnar88!
+</p>
+</div>
+</div>
+<div id="outline-container-orgb099643" class="outline-3">
+<h3 id="orgb099643"><span class="section-number-3">1.3</span> Для про­сто­го и быст­ро­го об­нов­ле­ния Ва­ше­го Slackware:</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Ре­ко­мен­ду­ет­ся от­клю­чить об­нов­ле­ние ком­по­нен­тов ядра и са­мо­го ядра:
+</p>
+
+<p>
+По­правь­те в кон­со­ли с по­мо­щью # nano /etc/slackpkg/blacklist вы­клю­чив нуж­ное (по­ста­вив перед име­нем груп­пы па­ке­та '#' ).
+</p>
+
+<p>
+По­правь­те в кон­со­ли с по­мо­щью # nano /etc/slackpkg/mirrors вклю­чив нуж­ное Вам зер­ка­ло па­ке­тов (на­при­мер mirror.​yandex.​ru).
+</p>
+
+<p>
+slackpkg update
+</p>
+
+<p>
+slackpkg update gpg
+</p>
+
+<p>
+slackpkg install-new
+</p>
+
+<p>
+slackpkg upgrade-all
+</p>
+
+<p>
+lilo
+</p>
+
+<p>
+Вы об­но­ви­лись ! 
+</p>
+</div>
+</div>
+<div id="outline-container-orgc6eab86" class="outline-3">
+<h3 id="orgc6eab86"><span class="section-number-3">1.4</span> 
+rus-slack</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+<a href="https://blog.ibice.ru/rusifikaciya-slackware-141-za-pyat-minut">https://blog.ibice.ru/rusifikaciya-slackware-141-za-pyat-minut</a>
+or 
+те, кто пользуется данным дистрибутивом достаточно долго, знают, что он любит только ручную настройку. Изменение системного языка тоже не в стороне. По факту же, если вы установили дистрибутив полностью, то вам необходимо поменять всего лишь пару строк. А именно, файлы в директории <i>etc/rc.d</i>
+Изменение локали делают внутри файла /etc/profile.d/lang.sh
+</p>
+
+<p>
+Пример содежимого. Коментируется строчка импортирующая Английский язык и добавляется строчка для импорта Русского языка
+<b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>**</b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b>
+#!/bin/sh
+</p>
+
+<p>
+export LANG=ru<sub>RU.UTF</sub>-8
+<b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>**</b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b>
+Далее, меняем содержимое файла /etc/profile.d/lang.csh
+Тут всё так же, как и в примере выше.
+<b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>*</b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b>
+#!/bin/csh
+</p>
+
+<p>
+#setenv LANG en<sub>US</sub>
+setenv LANG ru<sub>RU.UTF</sub>-8
+<b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>**</b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b>
+Далее необходимо перезагрузить иксы (CTRL+alt+BACKSPACE) или компьютер (по желанию).Если вы используете XFCE то Русский язык будет загружен сразу, если KDE, то придётся доустановить пакет с Русской локализацией.
+</p>
+
+<p>
+Далее, переключение расскладки. Тут можно пойти двумя способами. Начнём с классического, правки конфига :)
+</p>
+
+<p>
+По факту, нам нужен файл /etc/X11/xorg.conf.d/keyboard-layout.conf . Если такого нет, создайте:
+touch /etc/X11/xorg.conf.d/keyboard-layout.conf
+</p>
+
+<p>
+Внутри него поместите следующее содержимое:
+Section "InputClass"
+	Identifier "keyboard-all"
+	MatchIsKeyboard "on"
+	Driver "evdev"
+	Option "XkbLayout" "us,ru(winkeys)"
+	Option "XkbOptions" "terminate:ctrl<sub>alt</sub><sub>bksp,grp</sub>:ctrl<sub>shift</sub><sub>toggle,grp</sub><sub>led</sub>:scroll"
+EndSection
+</p>
+
+<p>
+и перезапустите ваш икс.
+</p>
+
+<p>
+Второй способ:
+</p>
+
+<p>
+через мененджер настроек KDE, там есть специальный раздел для раскладки. А в XFCE нужно собрать специальный плагин для панели XKB.
+</p>
+</div>
+</div>
+<div id="outline-container-org6e9482b" class="outline-3">
+<h3 id="org6e9482b"><span class="section-number-3">1.5</span> sbopkg</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Достаточно:
+</p>
+
+<p>
+во-первых, первую команду целиком: "sqg -p shutter", она сформирует очередь сборки зависимостей shutter.sqf,
+во-вторых, ".sqf" во второй команде, "sbopkg -i shutter.sqf" соберет очередь целиком.
+</p>
+
+<p>
+В очередь будут поставлены все 70 необходимых пакетов:
+$ wc -l /var/lib/sbopkg/queues/shutter.sqf
+70 /var/lib/sbopkg/queues/shutter.sqf
+</p>
+
+<p>
+добавлю, если уж используется Mate, часть пакетов уже может быть собранными и установленными. Поэтому, имеет смысл добавлять ключик -k, чтобы уже установленное не пыталось пересобираться:
+</p>
+
+<p>
+<a href="https://sbopkg.org/downloads.php">https://sbopkg.org/downloads.php</a> - homepage
+</p>
+</div>
+</div>
+<div id="outline-container-org740de31" class="outline-3">
+<h3 id="org740de31"><span class="section-number-3">1.6</span> slackbuilds.org</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+<a href="https://slackbuilds.org/">https://slackbuilds.org/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org19fd899" class="outline-3">
+<h3 id="org19fd899"><span class="section-number-3">1.7</span> slackware<sub>prog</sub></h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+slackpkg+ + sbopkg+pkgtool   slackpkg+
+</p>
+
+<p>
+slackbuilds.org
+</p>
+
+<p>
+slackpkg update &amp;&amp; slackpkg upgrade-all
+</p>
+
+<p>
+генерируем новый список зеркал для slackpkg
+slackpkg new-config
+­ В /etc/slackpkg/mirrors раскомментируем одно зеркало (не подошло
+выбираем другое)
+­ Обновляем базу пакетов
+slackpkg update
+­ Обновляем сами пакеты
+slackpkg upgrade-all
+</p>
+
+<p>
+Для свежего софта есть git clone &amp;&amp; src2pkg
+</p>
+
+<p>
+Я, например, не ставлю akonadi, php, метапакет kde, метапакет xap&#x2026; 
+</p>
+
+<p>
+Для автоматизации обновления подходит slackpkg (руководство <a href="http://www.slackpkg.org/documentation.html">http://www.slackpkg.org/documentation.html</a>) в частности,
+slackpkg check-updates — проверка факта наличия обновлений
+slackpkg update — обновление описаний пакетов
+slackpkg upgrade-all — обновление обновленных пакетов
+</p>
+
+<p>
+slackpkg upgrade-all  # обновить установленное
+slackpkg install myrepo  # выбрать и поставить отсутствующее
+</p>
+
+<p>
+быстро что-то установить, обновить, удалить
+</p>
+
+<p>
+slackpkg install|upgrade|remove что
+</p>
+
+<p>
+installpkg /путь/пакеты/*t?z /путь/еще<sub>пакеты</sub>/*t?z
+upgradepkf /путь/пакеты/*t?z /путь/еще<sub>пакеты</sub>/*t?z
+removepkg /путь/пакеты/*t?z пакет2 пакет7
+</p>
+
+<p>
+     #процедура обновления Slackware
+#slackpkg install-new
+#slackpkg upgrade-all
+#slackpkg clean-distro
+#reboot
+</p>
+</div>
+</div>
+<div id="outline-container-orgee28ab1" class="outline-3">
+<h3 id="orgee28ab1"><span class="section-number-3">1.8</span> xfce4-&#x2026;-plugin</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+xfce4-xkb-plugin
+xfce4-netload-plugin
+xfce4-screenshooter
+</p>
+</div>
+</div>
+<div id="outline-container-org78a028f" class="outline-3">
+<h3 id="org78a028f"><span class="section-number-3">1.9</span> выбор оконного менеджера</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+Чтобы упростить выбор оконного менеджера, в Slackware есть программа под названием xwmconfig, которую можно использовать для выбора рабочего стола или оконного менеджера. Запускается она так:
+</p>
+
+<p>
+% xwmconfig
+</p>
+
+<p>
+Вам будет представлен список всех установленных рабочих столов и оконных менеджеров. Просто выберите из этого списка то, что вам нужно. Каждому из пользователей вашей системы понадобится запустить эту программу, т.к. разные пользователи могу использовать разные рабочие столы, и не все захотят использовать тот, который вы выбрали как стандартный во время установки системы.
+</p>
+
+<p>
+Затем просто запустите X'ы, и вы готовы к дальнейшей работе.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb3babac" class="outline-3">
+<h3 id="orgb3babac"><span class="section-number-3">1.10</span> Установка программ из архивов(txz)</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+Пример:
+    Download texmaker-5.0.3-x86<sub>64</sub>-4<sub>slonly.txz</sub>
+    Install texmaker txz package:
+</p>
+</div>
+</div>
+<div id="outline-container-org8ad7c0b" class="outline-3">
+<h3 id="org8ad7c0b"><span class="section-number-3">1.11</span> Обновление slackware сразу после установки</h3>
+<div class="outline-text-3" id="text-1-11">
+<p>
+Рекомендуется отключить обновление компонентов ядра и самого ядра:
+</p>
+
+<p>
+Поправьте в консоли с помощью # nano /etc/slackpkg/blacklist выключив нужное (поставив перед именем группы пакета '#' ).
+</p>
+
+<p>
+Поправьте в консоли с помощью # nano /etc/slackpkg/mirrors включив нужное Вам зеркало пакетов (например mirror.yandex.ru).
+</p>
+
+<p>
+slackpkg update
+</p>
+
+<p>
+slackpkg update gpg
+</p>
+
+<p>
+slackpkg install-new
+</p>
+
+<p>
+slackpkg upgrade-all
+</p>
+
+<p>
+lilo
+</p>
+
+<p>
+Вы обновились !
+</p>
+
+<p>
+Программы управления пакетами Slackware находятся в пакете pkgtools используются для индивидуальной установки пакетов. 
+</p>
+</div>
+</div>
+<div id="outline-container-org002bfb9" class="outline-3">
+<h3 id="org002bfb9"><span class="section-number-3">1.12</span> для настройки KDE5 под администратором</h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+'kdesu systemsettings5'
+</p>
+</div>
+</div>
+<div id="outline-container-org19ca9cb" class="outline-3">
+<h3 id="org19ca9cb"><span class="section-number-3">1.13</span> Как избавиться от тиринга при использовании видеокарты INTEL</h3>
+<div class="outline-text-3" id="text-1-13">
+<p>
+"Видеокарты Intel по-умолчанию используют ускорение SNA и DRI2. Для решения проблем с тирингом рекомендуется использовать опцию TearFree, либо включить DRI3. Нельзя TearFree и DRI3 использовать одновременно, ибо у вас начнут виснуть иксы или рабочее окружение. Напомню, что TearFree немного снижает производительность графики.  
+Необходимо создать файл /etc/X11/xorg.conf.d/20-intel.conf и вставить в него один из предложенных вариантов (метод uxa считается устаревшим). 
+</p>
+
+<p>
+1 вариант
+Section "Device"
+   Identifier  "Intel Graphics"
+   Driver "intel"
+   Option "AccelMethod" "sna"
+   Option "TearFree" "true"
+EndSection
+</p>
+
+<p>
+2 вариант
+Section "Device"
+   Identifier  "Intel Graphics"
+   Driver "intel"
+   Option "AccelMethod" "sna"
+   Option "DRI" "3"
+EndSection
+</p>
+
+<p>
+3 вариант
+Section "Device"
+   Identifier  "Intel Graphics"
+   Driver "intel"
+   Option "AccelMethod" "uxa"
+   Option "DRI" "3"
+EndSection "
+</p>
+</div>
+</div>
+<div id="outline-container-orgfdec2a3" class="outline-3">
+<h3 id="orgfdec2a3"><span class="section-number-3">1.14</span> Вменяемое отображение шрифтов в Java-приложениях</h3>
+<div class="outline-text-3" id="text-1-14">
+<p>
+В файл ~.bashrc добавить строку 'export _JAVA<sub>OPTIONS</sub>="-Dawt.useSystemAAFontSettings=on"'
+</p>
+</div>
+</div>
+<div id="outline-container-orgb2c1aa9" class="outline-3">
+<h3 id="orgb2c1aa9"><span class="section-number-3">1.15</span> Если тиринг только в firefox</h3>
+<div class="outline-text-3" id="text-1-15">
+<p>
+"1) Откройте about:config 
+</p>
+<ol class="org-ol">
+<li>Найдите layers.acceleration.force-enabled</li>
+<li>Измените значение (Value) на true.</li>
+<li>Перезагрузите браузер"</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org24b5cb7" class="outline-3">
+<h3 id="org24b5cb7"><span class="section-number-3">1.16</span> Восстановление загрузчика lilo</h3>
+<div class="outline-text-3" id="text-1-16">
+<ol class="org-ol">
+<li>Загрузить машину с помощью установочного носителя Slackware</li>
+
+<li>Смонтировать основной раздел</li>
+
+<li>Смонтировать раздел 'boot' (если есть)</li>
+
+<li># chroot /mnt</li>
+
+<li>Перейти в смонтированный раздел</li>
+
+<li># lilo -v</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0eee43d" class="outline-2">
+<h2 id="org0eee43d"><span class="section-number-2">2</span> Чтобы нашему юзеру не было грустно, по инерции редактируем /etc/sudoers.</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Раскомментируем строку %wheel All=(ALL) ALL в /etc/sudoers 
+</p>
+</div>
+</div>
+<div id="outline-container-org176c905" class="outline-2">
+<h2 id="org176c905"><span class="section-number-2">3</span> Теперь самое время научиться стартовать сессию Xorg от имени пользователя и делать это автоматически.</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+id:4:initdefault   вместо   id:3:initdefault 
+</p>
+</div>
+</div>
+<div id="outline-container-org537d096" class="outline-2">
+<h2 id="org537d096"><span class="section-number-2">4</span> slackpkg</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Окей, в слакваре есть некоторые подобия пакетных менеджеров. Только ни один из них пока что не научился притягивать нужные зависимости, как это делают другие пакетные менеждеры типа pacman, emerge. Зато они умеют распаковывать и собирать пакеты.
+</p>
+
+<p>
+Один из них, slackpkg, я буду настраивать ниже:
+</p>
+
+<p>
+Раскомментируем ОДНО зеркало в /etc/slackpkg/mirrors и обновим его.
+</p>
+
+<p>
+nano /etc/slackpkg/mirrors 
+</p>
+</div>
+</div>
+<div id="outline-container-org8846362" class="outline-2">
+<h2 id="org8846362"><span class="section-number-2">5</span> Руссификация Slackware 14</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Те, кто пользуется данным дистрибутивом достаточно долго, знают, что он любит только ручную настройку. Изменение системного языка тоже не в стороне. По факту же, если вы установили дистрибутив полностью, то вам необходимо поменять всего лишь пару строк. А именно, файлы в директории <i>etc/rc.d</i>
+</p>
+
+<p>
+Изменение локали делают внутри файла nano /etc/profile.d/lang.sh
+</p>
+
+<p>
+Пример содежимого. Коментируется строчка импортирующая Английский язык и добавляется строчка для импорта Русского языка
+</p>
+
+<p>
+<b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>**</b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b>
+</p>
+
+<p>
+#!/bin/sh
+</p>
+
+<p>
+export LANG=ru<sub>RU.UTF</sub>-8
+</p>
+
+<p>
+<b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>**</b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b>
+</p>
+
+<p>
+Далее, меняем содержимое файла nano /etc/profile.d/lang.csh
+</p>
+
+<p>
+Тут всё так же, как и в примере выше.
+</p>
+
+<p>
+<b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>*</b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b>
+</p>
+
+<p>
+#!/bin/csh
+</p>
+
+<p>
+#setenv LANG en<sub>US</sub>
+setenv LANG ru<sub>RU.UTF</sub>-8
+</p>
+
+<p>
+<b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b>**</b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b>
+</p>
+
+<p>
+Далее необходимо перезагрузить иксы (CTRL+alt+BACKSPACE) или компьютер (по желанию).
+</p>
+</div>
+</div>
+<div id="outline-container-org8f1e309" class="outline-2">
+<h2 id="org8f1e309"><span class="section-number-2">6</span> Локализация KDE 4.14.3 (slackware 14.2)-KDE 4.12.5(slackware 14.1)</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+локализация kde4 in slackware 14.1
+</p>
+
+<p>
+Если ранее использовались локализации, отличные от английской, соответствующие пакеты также надо обновить, например, для русской — такой командой:
+</p>
+
+<p>
+Если никаких пакетов локализации не было установлено, но теперь потребовались, их надо установить:
+</p>
+
+<p>
+локализация kde4 in slackware 14.2
+</p>
+
+<p>
+Если ранее использовались локализации, отличные от английской, соответствующие пакеты также надо обновить, например, для русской — такой командой:
+</p>
+
+<p>
+Если никаких пакетов локализации не было установлено, но теперь потребовались, их надо установить:
+</p>
+</div>
+</div>
+<div id="outline-container-orgeb502f8" class="outline-2">
+<h2 id="orgeb502f8"><span class="section-number-2">7</span> Как установить пакет *.txz</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+install Howto
+</p>
+
+<p>
+Download mozilla-firefox-78.11.0esr-x86<sub>64</sub>-1gv.txz
+Install mozilla-firefox txz package:
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2021-06-26 Сб 17:23</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

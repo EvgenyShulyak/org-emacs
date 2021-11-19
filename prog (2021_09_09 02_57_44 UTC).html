@@ -1,0 +1,1560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-05-21 Пт 13:07 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2f9b03a">1. Prog.</a>
+<ul>
+<li><a href="#orgaabeace">1.1. Компиляция и установка программ из исходников</a></li>
+<li><a href="#orge7dc437">1.2. libreofficerus</a></li>
+<li><a href="#org32a7a4a">1.3. yandex-disk<sub>install</sub></a></li>
+<li><a href="#org948205f">1.4. vokoscreen</a></li>
+<li><a href="#org9e59b97">1.5. avidemux-qt</a></li>
+<li><a href="#org5dc4500">1.6. Cherrytree в Debian 10</a></li>
+<li><a href="#orgf0cef0e">1.7. Краткий справочник по командам MPlayer_</a></li>
+<li><a href="#org9d1d457">1.8. мультизагрузочная флешка</a></li>
+<li><a href="#orgbe79e6b">1.9. Состав Xpdf</a></li>
+<li><a href="#org7e92ba5">1.10. рисовать на экране</a></li>
+<li><a href="#org4e422a1">1.11. Parom.TV для Linux</a></li>
+<li><a href="#org599946c">1.12. browser<sub>tor</sub></a></li>
+<li><a href="#orgc7c4117">1.13. Установка XFCE</a></li>
+<li><a href="#org5419b61">1.14. Установка и запуск tor</a></li>
+<li><a href="#org198f72a">1.15. Список плагинов XFCE</a></li>
+<li><a href="#orgd8c274b">1.16. Использование screenfetch</a></li>
+<li><a href="#org757ff74">1.17. Информация о системе<sub>neofetch</sub></a></li>
+<li><a href="#org5ffbd48">1.18. ОПТИМИЗАЦИЯ<sub>ИЗОБРАЖЕНИЙ</sub><sub>LINUX</sub></a></li>
+<li><a href="#orgac1b8a0">1.19. debian-openbox</a></li>
+<li><a href="#org0700893">1.20. Openbox Debian</a></li>
+<li><a href="#orgb92a7d1">1.21. debian XFCE 10-подключение смартфона</a></li>
+<li><a href="#org277588b">1.22. How To Install VirtualBox 6.0 on Debian 10</a></li>
+<li><a href="#org98f3d6a">1.23. Gnumeric</a></li>
+<li><a href="#org7de8942">1.24. scrot</a></li>
+<li><a href="#org8b9e619">1.25. ripgrep</a></li>
+<li><a href="#org5540da3">1.26. pdf</a></li>
+<li><a href="#org1a8141d">1.27. запись образа(программа)</a></li>
+<li><a href="#org7ac0bf3">1.28. moc</a></li>
+<li><a href="#org02f9a0c">1.29. mc</a></li>
+<li><a href="#org8ff3f81">1.30. inxi(сведения о системе)</a></li>
+<li><a href="#org85d26d7">1.31. fm nnn</a></li>
+<li><a href="#orgf887ff3">1.32. Micro</a></li>
+<li><a href="#org59fb522">1.33. i3 prog</a></li>
+<li><a href="#org59ca253">1.34. Выпадающий терминал в XFCE</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2f9b03a" class="outline-2">
+<h2 id="org2f9b03a"><span class="section-number-2">1</span> Prog.</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgaabeace" class="outline-3">
+<h3 id="orgaabeace"><span class="section-number-3">1.1</span> Компиляция и установка программ из исходников</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+./configure
+make
+ Для установки необходимо выполнить
+</p>
+
+<p>
+sudo make install
+ Для удаления пакета, установленного данным способом необходимо выполнить в корневой директории исходников программы (там где вы запускали make install).
+</p>
+
+<p>
+sudo make uninstall
+</p>
+</div>
+</div>
+<div id="outline-container-orge7dc437" class="outline-3">
+<h3 id="orge7dc437"><span class="section-number-3">1.2</span> libreofficerus</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+sudo apt-get install libreoffice-l10n-ru libreoffice-help-ru
+</p>
+</div>
+</div>
+<div id="outline-container-org32a7a4a" class="outline-3">
+<h3 id="org32a7a4a"><span class="section-number-3">1.3</span> yandex-disk<sub>install</sub></h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+sudo yandex-disk
+setup yandex-disk
+</p>
+</div>
+</div>
+<div id="outline-container-org948205f" class="outline-3">
+<h3 id="org948205f"><span class="section-number-3">1.4</span> vokoscreen</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Vokoscreen, это простое приложение, скринкастер для записи видео с экрана, основанное на ffmpeg. Vokoscreen может записывать видео неограниченной длины с хорошим качеством. Есть опция для выбора частоты кадров видео, а также поддерживается звуковое сопровождение. Vokoscreen может записывать весь экран, отдельное окно или выборочную область с возможностью паузы и возобновления записи.
+Приложение работает в любом окружениями рабочего стола Linux: Unity, Gnome Shell, Cinnamon, Mate, KDE, Xfce и др. Этот скринкастер отлично подходит, чтобы записывать видео с компьютерных игр.
+</p>
+
+<p>
+Некоторые возможности Vokoscreen:
+</p>
+
+<p>
+Запись всего экрана, отдельного окона или выделенной области
+Опция магнификации (лупа)
+Запись видео с вебкамеры
+Запись видео в формате avi и mkv
+Запись аудио в формат mp3
+Опция скрытия/отображения курсора при записи
+</p>
+</div>
+</div>
+<div id="outline-container-org9e59b97" class="outline-3">
+<h3 id="org9e59b97"><span class="section-number-3">1.5</span> avidemux-qt</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Установка в ArchLinux (Manjaro)
+sudo pacman -S avidemux-qt
+</p>
+</div>
+</div>
+<div id="outline-container-org5dc4500" class="outline-3">
+<h3 id="org5dc4500"><span class="section-number-3">1.6</span> Cherrytree в Debian 10</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+Скачиваем python-gtksourceview2<sub>2.10.1</sub>-3<sub>amd64.deb</sub> и cherrytree<sub>0.38.8</sub>-0<sub>all.deb</sub>. Из синаптика ставим. Затем ставим python-gtksourceview2<sub>2.10.1</sub>-3<sub>amd64.deb</sub>. Последним ставим cherrytree<sub>0.38.8</sub>-0<sub>all.deb</sub>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf0cef0e" class="outline-3">
+<h3 id="orgf0cef0e"><span class="section-number-3">1.7</span> Краткий справочник по командам MPlayer_</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+Пробел Воспроизведение/Пауза
+Стрелка вверх/вниз Переход на 1 минуту вперед/назад
+Стрелка вправо/влево Переход на 10 секунд вперед/назад
+Page Up / Page Down Переход на 10 минут вперед/назад
+Воспроизвести DVD $ mplayer dvd://1
+Воспроизвести CD $ mplayer cdda://
+1 и 2 Контрастность
+3 и 4 Яркость
+5 и 6 Цветность
+7 и 8 Насыщенность
+9 и 0 Вторичный регулятор громкости
+F Полноэкранный режим
+Enter Закрыть текущий файл
+Q Закрыть MPlayer
+O Индикация на экране
+V Показать субтитры
+</p>
+<ul class="org-ul">
+<li>Увеличить громкость</li>
+</ul>
+<p>
+/ Уменьшить громкость
+</p>
+</div>
+</div>
+<div id="outline-container-org9d1d457" class="outline-3">
+<h3 id="org9d1d457"><span class="section-number-3">1.8</span> мультизагрузочная флешка</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+мультизагрузочная флешка
+sudo ventoy -i -I -u /dev/sdXXX
+</p>
+</div>
+</div>
+<div id="outline-container-orgbe79e6b" class="outline-3">
+<h3 id="orgbe79e6b"><span class="section-number-3">1.9</span> Состав Xpdf</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+В состав Xpdf входит целый набор утилит:
+</p>
+
+<p>
+xpdf/XpdfReader — основная программа для просмотра PDF-файлов
+pdftotext — утилита для конвертации PDF в обычный текст
+pdftops — утилита для конвертации PDF в PostScript
+pdftoppm — утилита для конвертации PDF страниц в файлы изображений PPM/PGM/PBM
+pdftopng — утилита для конвертации PDF страниц в PNG
+pdftohtml — утилита для конвертации PDF в HTML-формат
+pdfinfo — утилита для выборки мета-данных
+pdfimages — утилита для извлечения изображений из PDF файлов
+pdffonts — выводит список шрифтов, используемых в PDF файле
+pdfdetach — извлекает прикрепленные файлы из PDF файлов
+</p>
+</div>
+</div>
+<div id="outline-container-org7e92ba5" class="outline-3">
+<h3 id="org7e92ba5"><span class="section-number-3">1.10</span> рисовать на экране</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+Gromit - рисования на рабочем столе и/или поверх окон. Установка yaourt -S gromit-mpx-git
+</p>
+</div>
+</div>
+<div id="outline-container-org4e422a1" class="outline-3">
+<h3 id="org4e422a1"><span class="section-number-3">1.11</span> Parom.TV для Linux</h3>
+<div class="outline-text-3" id="text-1-11">
+<p>
+Как запустить файл AppImage
+</p>
+
+<p>
+Для запуска файла в формате AppImage его сначала нужно сделать исполняемым. Для этого можно щелкнуть правой кнопкой мыши по файлу и открыть окно Свойства, в окне Свойств установить опцию — Разрешить выполнение (название опции может отличаться). Так же можно воспользоваться командной строкой и выполнить команду chmod:
+</p>
+
+<p>
+chmod +x Parom.TV.AppImage
+</p>
+
+<p>
+После этого достаточно просто запустить файл — дважды щелкнуть по файлу или же запустить файл из командной строки:
+</p>
+
+<p>
+./Parom.TV.AppImage
+</p>
+</div>
+</div>
+<div id="outline-container-org599946c" class="outline-3">
+<h3 id="org599946c"><span class="section-number-3">1.12</span> browser<sub>tor</sub></h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+Этот браузер известен каждому, интересующемуся интернет-безопасностью и тому, кто хоть раз пытался обойти различные блокировки, будь то rutracker, или любые другие заблокированные сервисы.
+</p>
+
+<p>
+Первая вкладка, которая нам понадобится это «Приватность браузера». Поставим всегда работать в режиме приватного просмотра, защиту от отслеживания – всегда, поддельное и обманное содержимое — включаем все.
+</p>
+
+<p>
+Теперь нажимаем на TorButton, эта кнопка слева от строки поиска. Тут выбираем максимальный уровень защиты.
+</p>
+
+<p>
+Самый сильный защитник браузера, это конечно же, «Дополнения», они защититят вас от слежения при серфинге интернета, вредоносные сайты будут заблокированы. Некторые из них уже установлены в TOR заранее, разработчиками, но они необеспечивают полную защиту
+</p>
+
+<p>
+Disconnect — Конфиденциальный Блокировщик Рекламы: Блокирует трекеры google analytics/яндекс статистика и т.д. — основные средства слежения за вашей историей посещения сайтов, местонахождению и многих других данных.
+Adblock Plus — Блокирует трекеры, майнинг, рекламу, и т.п.
+User-Agent Switcher — Автоматически меняет Ваш fingerprint компьютера\браузера.
+Man in the Middle — Защищает от перехвата интернет-траффика\MITM атаки. Это расширение можно скрыть с панели расширений.
+Disable WebRTC — Протокол WebRTC выдает настоящий ip, цепь соединений TOR и другие данные, даже если Вы используете другие средства защиты, так что отключим этот протокол.
+</p>
+
+<p>
+Теперь следует настроить эти расширения.
+</p>
+
+<p>
+NoScript — это расширение надо настраивать в зависимости от уровня защиты который Вы хотите иметь. Но важно помнить, что если вы поставите галочки везде, большинство сайтов будут некорректно работать.
+Https Everywhere — нажимаем на кнопку этого дополнения и ставим в обоих пунктах галочки.
+AdBlock Plus — Заходим в настройки и в «сторонних фильтрах» желательно выбрать дополнительные базы.
+User-Agent Switcher — Здесь мы выбираем разброс 25%, и все UserAgents.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7c4117" class="outline-3">
+<h3 id="orgc7c4117"><span class="section-number-3">1.13</span> Установка XFCE</h3>
+<div class="outline-text-3" id="text-1-13">
+<p>
+Для установки XFCE введите apt install xfce4
+</p>
+
+<p>
+Рекомендую сразу ставить xfce4 xfce4-goodies network-manager-gnome одной командой то есть:
+</p>
+
+<p>
+apt install xfce4 xfce4-goodies network-manager-gnome
+</p>
+</div>
+</div>
+<div id="outline-container-org5419b61" class="outline-3">
+<h3 id="org5419b61"><span class="section-number-3">1.14</span> Установка и запуск tor</h3>
+<div class="outline-text-3" id="text-1-14">
+<p>
+sudo pacman -S tor torsocks
+Запуск, остановка сервиса tor
+sudo systemctl start tor
+sudo systemctl stop tor
+Запуск через tor.
+torify zsh
+torify ssh user@blabla -p 22
+Проверка ip.
+curl &#x2013;max-time 10 -w '\n' <a href="http://ident.me">http://ident.me</a>
+В firefox используйте расширение FoxyProxy.
+В настройках расширения, Добавить новый SOCKS4, ip: 127.0.0.1, port: 9050
+Chromium запустите с флагом.
+chromium &#x2013;proxy-server='socks://127.0.0.1:9050' &amp;
+Если нужно отредактируйте сервис.
+sudo nano /usr/lib/systemd/system/tor.service
+[Service]
+User=root
+Group=root
+Type=simple
+sudo chown -R root:root <i>var/lib/tor</i>
+sudo systemctl daemon-reload
+sudo systemctl restart tor
+</p>
+</div>
+</div>
+<div id="outline-container-org198f72a" class="outline-3">
+<h3 id="org198f72a"><span class="section-number-3">1.15</span> Список плагинов XFCE</h3>
+<div class="outline-text-3" id="text-1-15">
+<p>
+xfce4-battery-plugin - модуль наблюдения за состоянием батареи для панели Xfce4
+</p>
+
+<p>
+xfce4-clipman-plugin - история буфера обмена, модуль панели Xfce
+</p>
+
+<p>
+xfce4-cpufreq-plugin - отображание частоты процессора, модуль панели Xfce4
+</p>
+
+<p>
+xfce4-cpugraph-plugin - Плагин графика загрузки процессора для панели Xfce4
+</p>
+
+<p>
+xfce4-datetime-plugin - модуль отображения даты и времени для панели Xfce4
+</p>
+
+<p>
+xfce4-diskperf-plugin - плагин отображения производительности диска для панели Xfce4
+</p>
+
+<p>
+xfce4-fsguard-plugin - модуль панели Xfce4 для наблюдения за файловой системой
+</p>
+
+<p>
+xfce4-genmon-plugin - система базового наблюдения для панели Xfce4
+</p>
+
+<p>
+xfce4-goodies - улучшения для среды рабочего стола Xfce4
+</p>
+
+<p>
+xfce4-mailwatch-plugin - плагин для отслеживания почты для панели Xfce4
+</p>
+
+<p>
+xfce4-netload-plugin - отображение параметров сетевого трафика, модуль панели Xfce4
+</p>
+
+<p>
+xfce4-notes-plugin - расширение Notes — записки для рабочего стола Xfce4
+</p>
+
+<p>
+xfce4-panel - панель для рабочего стола Xfce4
+</p>
+
+<p>
+xfce4-places-plugin - быстрый доступ к каталогам, документам и подключаемым носителям
+</p>
+
+<p>
+xfce4-power-manager-plugins - расширения менеджера управления электропитанием для панели Xfce
+</p>
+
+<p>
+xfce4-pulseaudio-plugin - Плагин Xfce4 для управления звуком
+</p>
+
+<p>
+xfce4-sensors-plugin - показания аппаратных датчиков, модуль панели Xfce4
+</p>
+
+<p>
+xfce4-smartbookmark-plugin - модуль панели Xfce4 для поиска в веб-ресурсах
+</p>
+
+<p>
+xfce4-systemload-plugin - монитор загрузки системы, расширние панели Xfce4
+</p>
+
+<p>
+xfce4-timer-plugin - модуль отображения времени для панели Xfce
+</p>
+
+<p>
+xfce4-verve-plugin - модуль Verve (командная строка) для панели Xfce
+</p>
+
+<p>
+xfce4-wavelan-plugin - состояние радиосети, расширение для панели Xfce4
+</p>
+
+<p>
+xfce4-weather-plugin - информация о погоде, расширение панели Xfce4
+</p>
+
+<p>
+xfce4-whiskermenu-plugin - альтернативный модуль меню для окружения рабочего стола Xfce
+</p>
+
+<p>
+xfce4-xkb-plugin - модуль переключения раскладок клавиатуры для панели Xfce4
+</p>
+
+<p>
+ayatana-indicator-session - Индикатор Ayatana, показывающий управление сеансом, статус и переключение пользователей
+</p>
+
+<p>
+budgie-sntray-plugin - плагин для xfce4-панели для отображения статуса NotifierItems - Budgie
+</p>
+
+<p>
+libxfce4panel-2.0-dev - Библиотеки панелей Xfce4 (вариант GTK3)
+</p>
+
+<p>
+mate-sntray-plugin - плагин для xfce4-панели для отображения StatusNotifierItems - MATE
+</p>
+
+<p>
+vala-sntray-plugin - плагин для xfce4-панели для отображения StatusNotifierItems - Vala
+</p>
+
+<p>
+xfce4-appmenu-plugin - Плагин меню приложений для xfce4-панели
+</p>
+
+<p>
+xfce4-equake-plugin - Плагин панели Xfce, который отслеживает землетрясения
+</p>
+
+<p>
+xfce4-eyes-plugin - глаза, которые следуют за вашей мышью для панели Xfce4
+</p>
+
+<p>
+xfce4-indicator-plugin - модуль отображения информации от приложений на панели Xfce4
+</p>
+
+<p>
+xfce4-mount-plugin - монтирование файловых систем, модуль панели Xfce4
+</p>
+
+<p>
+xfce4-mpc-plugin - модуль панели Xfce — клиент к музыкальному проигрывателю MPD
+</p>
+
+<p>
+xfce4-sntray-plugin - плагин для xfce4-панели для отображения StatusNotifierItems - Xfce
+</p>
+
+<p>
+xfce4-sntray-plugin-common - плагин для xfce4-панели для отображения StatusNotifierItems - обычный
+</p>
+
+<p>
+xfce4-statusnotifier-plugin - плагин для отображения уведомлений о состоянии на панели Xfce4
+</p>
+
+<p>
+А так же устанавливаем плагины для удобного подключения к сети и vpn:
+</p>
+
+<p>
+network-manager-gnome - управление сетевыми подключениями
+network-manager-openvpn-gnome - Подключение VPN
+</p>
+
+<p>
+Ну и конечно же bluetooth:
+blueman
+</p>
+</div>
+</div>
+<div id="outline-container-orgd8c274b" class="outline-3">
+<h3 id="orgd8c274b"><span class="section-number-3">1.16</span> Использование screenfetch</h3>
+<div class="outline-text-3" id="text-1-16">
+<p>
+sudo apt install screenfetch
+</p>
+
+<p>
+Откройте терминал, введите и выполните команду:
+</p>
+
+<p>
+screenfetch
+</p>
+
+<p>
+После выполнения команды, вы должны увидеть в терминале подобную информацию о вашей системе
+</p>
+
+<p>
+Чтобы сделать автозапуск screenFetch, перейдите от имени root к папке /etc и найдите bash.bashrc файл. Откройте bash.bashrc файл и добавьте в самый низ screenfetch
+</p>
+</div>
+</div>
+<div id="outline-container-org757ff74" class="outline-3">
+<h3 id="org757ff74"><span class="section-number-3">1.17</span> Информация о системе<sub>neofetch</sub></h3>
+<div class="outline-text-3" id="text-1-17">
+<p>
+Установка в Debian/Ubuntu/Mint
+$ sudo add-apt-repository ppa:dawidd0811/neofetch
+$ sudo apt-get update
+$ sudo apt-get install neofetch
+</p>
+</div>
+</div>
+<div id="outline-container-org5ffbd48" class="outline-3">
+<h3 id="org5ffbd48"><span class="section-number-3">1.18</span> ОПТИМИЗАЦИЯ<sub>ИЗОБРАЖЕНИЙ</sub><sub>LINUX</sub></h3>
+<div class="outline-text-3" id="text-1-18">
+<p>
+jpegoptim - утилита для оптимизации и сжатия изображений без потери качества в формате JPEG;
+optipng - это небольшая программа, которая позволяет уменьшить размер PNG изображений без потери качества.
+</p>
+</div>
+</div>
+<div id="outline-container-orgac1b8a0" class="outline-3">
+<h3 id="orgac1b8a0"><span class="section-number-3">1.19</span> debian-openbox</h3>
+<div class="outline-text-3" id="text-1-19">
+<p>
+Debian-openbox
+1)устанавливаем голый дебиан(без рабочего стола)
+2)apt update
+3)apt install sudo
+  adduser jenit sudo
+4)EDITOE=nano vi sudo
+5)sudo apt install x11-utils xinit
+6)sudo apt install openbox openbox-menu obconf obmenu obsession lxappearance lxappearance-obconf lightdm tint2 volti pulseaudio pavucontrol gmrun network-manager feh lx-terminal mousepad abiword gnumeric flameshot moc mc vlc testdisk 
+7)mkdir -p .config/openbox
+  sudo cp <i>etc/xbg/openbox/* .config/openbox</i>
+8)sudo chown jenit:jenit config/openbox/*
+9)nano /config/openbox/autostart &gt;tint2&gt;volti
+</p>
+</div>
+</div>
+<div id="outline-container-org0700893" class="outline-3">
+<h3 id="org0700893"><span class="section-number-3">1.20</span> Openbox Debian</h3>
+<div class="outline-text-3" id="text-1-20">
+<p>
+Openbox №1
+</p>
+
+<p>
+Пакеты, X Window:
+</p>
+
+<p>
+   По Х-ам: Можно установить полный пакет xorg с набором утилит и драйверов.
+Либо установить драйвер для своей карты(nvidia,intel,amd&#x2026;), для nvidia это:
+xserver-xorg-video-nouveau
+	x11-xserver-utils
+	x11-utils
+	xinit (это на случай: “может пригодиться”)
+Это пакеты, что устанавливал. При необходимости нужное всегда можно доустановить.
+</p>
+
+<p>
+Пакеты, начальная установка:
+</p>
+
+<p>
+openbox - оконный менеджер
+obconf - настройка openbox
+openbox-menu - меню openbox
+obmenu - графический интерфейс редактирования меню openbox
+lxappearance - настройка интерфейса gtk
+lxappearance-obconf - вкладка настроек интерфейса obconf в lxappearance
+tint2 - панель
+volti - регулятор громкости
+pulseaudio - звуковая система
+pavucontrol - утилита управления звуком для pulseaudio
+obsession - управление сессией openbox
+wicd(network-manager-gnome) - управление сетевыми подключениями/настройками
+xxkb - индикатор, переключатель раскладки
+xdm, slim, lightdm(рекомендую) - менеджер дисплея
+lxterminal(можно другой) - терминал
+pcmanfm - файловый менеджер
+feh(nitrogen) - обои на рабочий стол
+mousepad - текстовый редактор(leafpad сдох)
+gmrun - графическая программа для запуска приложений
+.
+</p>
+
+
+<p>
+Первые шаги после установки:
+</p>
+
+<p>
+ Сооружаем скрытую директорию:
+.config/openbox (mkdir -p .config/openbox)
+копируем файлы из:
+/etc/xdg/openbox
+в:
+.config/openbox (sudo cp <i>etc/xdg/openbox/* ~</i>.config/openbox/)
+ Должны появится файлы:
+autostart
+environment
+rc.xml
+menu.xml
+ Далее нужно сменить владельца этих файлов:
+sudo chown имя:имя .config/openbox/*
+Теперь эти файлы можно редактировать без “sudo”
+.
+</p>
+
+
+<p>
+Настраиваем “выход”:
+</p>
+
+<p>
+ В файл menu.xml (.config/openbox/menu.xml) добавляем:
+&lt;item label="Shutdown"&gt;
+      	&lt;action name="Execute"&gt;
+              	&lt;execute&gt;obsession-logout&lt;/execute&gt;
+      	&lt;/action&gt;
+  &lt;/item&gt;
+</p>
+</div>
+</div>
+<div id="outline-container-orgb92a7d1" class="outline-3">
+<h3 id="orgb92a7d1"><span class="section-number-3">1.21</span> debian XFCE 10-подключение смартфона</h3>
+<div class="outline-text-3" id="text-1-21">
+<p>
+Что за DE? Может gvfs-backends надо поставить?
+</p>
+
+<p>
+устновить чтобы подключался и был определен(виден) смартфон
+</p>
+
+<p>
+Install gvfs-backends
+</p>
+
+<p>
+Installing gvfs-backends package on Debian 9 (Stretch) is as easy as running the following command on terminal:
+</p>
+
+<p>
+sudo apt-get update
+sudo apt-get install gvfs-backends
+</p>
+</div>
+</div>
+<div id="outline-container-org277588b" class="outline-3">
+<h3 id="org277588b"><span class="section-number-3">1.22</span> How To Install VirtualBox 6.0 on Debian 10</h3>
+<div class="outline-text-3" id="text-1-22">
+<p>
+Step 1 – Prerequsities
+</p>
+
+<p>
+sudo apt update
+sudo apt upgrade
+</p>
+
+<p>
+Step 2 – Setup Apt Repository
+</p>
+
+<p>
+wget -q <a href="https://www.virtualbox.org/download/oracle_vbox_2016.asc">https://www.virtualbox.org/download/oracle_vbox_2016.asc</a> -O- | sudo apt-key add -
+wget -q <a href="https://www.virtualbox.org/download/oracle_vbox.asc">https://www.virtualbox.org/download/oracle_vbox.asc</a> -O- | sudo apt-key add -
+</p>
+
+<p>
+Then configure the apt repository on your Debian 10 Buster system. This command will add an entry to /etc/apt/sources.list file at end of the file.
+</p>
+
+<p>
+sudo add-apt-repository "deb <a href="http://download.virtualbox.org/virtualbox/debian">http://download.virtualbox.org/virtualbox/debian</a> bionic contrib"
+</p>
+
+<p>
+Step 3 – Install VirtualBox on Debian 10
+</p>
+
+<p>
+sudo apt update
+sudo apt install virtualbox-6.0
+</p>
+
+<p>
+Step 4 – Launch VirtualBox
+</p>
+
+<p>
+$ virtualbox
+</p>
+</div>
+</div>
+<div id="outline-container-org98f3d6a" class="outline-3">
+<h3 id="org98f3d6a"><span class="section-number-3">1.23</span> Gnumeric</h3>
+<div class="outline-text-3" id="text-1-23">
+<p>
+редактор таблиц - Gnumeric
+</p>
+
+<p>
+sudo apt-get install gnumeric
+</p>
+
+<p>
+текстовой редактор - Abiword
+</p>
+</div>
+</div>
+<div id="outline-container-org7de8942" class="outline-3">
+<h3 id="org7de8942"><span class="section-number-3">1.24</span> scrot</h3>
+<div class="outline-text-3" id="text-1-24">
+<p>
+В linux сделать скриншот можно несколькими различными способами. Одним из них является scrot - очень полезная утилита, которая позволяет делать это непосредственно из командной строки.
+scrot предустановлен в большинстве дистрибутивов Linux. Если у вас он не установлен, просто введите соответствующую команду в терминале.
+</p>
+
+<p>
+Для Ubuntu:
+</p>
+
+<p>
+$ sudo apt-get install scrot
+Как ним пользоваться? scrot позволяет делать скриншоты быстро и без лишних усилий.
+Для создания скриншота всего рабочего стола откройте терминал, введите команду scrot и нажмите Enter:
+</p>
+
+<p>
+For Arch:
+sudo pacman -S scrot:
+$ scrot
+</p>
+
+<p>
+Изображение будет сохранено в текущей директории с именем, которое по умолчанию имеет формат filename<sub>date</sub><sub>and</sub><sub>time</sub><sub>screen</sub> resolution<sub>scrot.png</sub>
+</p>
+
+<p>
+Вы можете задать свое имя и тип изображения с помощью команды:
+</p>
+
+<p>
+$ scrot ~/Photos/unixmen.jpg
+Вышеприведенная команда делает скриншот всего рабочего стола и сохраняет его в папке Photos под именем unixmen, тип файла - jpg.
+</p>
+
+<p>
+Создание скриншота выделенной области рабочего стола
+scrot также позволяет создавать скриншоты выделенной области экрана. Это просто потрясающе.
+Введите приведенную ниже команду в терминале и нажмите Enter:
+</p>
+
+<p>
+$ scrot -s
+После нажатия enter выделите область, скриншот которой вы хотите сделать, и кликните.
+</p>
+
+<p>
+Задержка во времени
+Чтобы сделать скриншот всего экрана с помощью scrot через определенное время, необходимо добавить аргумент "-d" (delay) к команде scrot со временем в секундах. Таким образом, чтобы сделать скриншот через 7 секунд, используйте команду:
+</p>
+
+<p>
+$ scrot -d 7 unixmen.jpg
+При этом через 7 секунд будет сделан скриншот всего экрана и сохранен в домашней директории под именем unixmen.jpg.
+В добавление к "-d" вы можете использовать параметр "-c", чтобы вывести обратный отсчет до снятия скриншота в терминале. Пример:
+</p>
+
+<p>
+$ scrot -d 7 -c unixmen.jpg
+При этом стартует отсчет 8.. 7.. 6.. 5.. 4.. 3.. 2.. 1.. 0.. (как показано ниже), немедленно после достижения 0 делается скриншот и сохраняется в домашней директории под именем unixmen.jpg.
+С помощью аргумента "-q" можно также задать качество изображения.
+</p>
+
+<p>
+Вы можете также сделать скриншот, открыть и отредактировать его в GIMP, с помощью комбинации команд:
+</p>
+
+<p>
+$ scrot -q 90 -d 7 unixmen.png &amp;&amp; gimp unixmen.png &amp;
+Более подробную информацию об использовании scrot можно получить из его man-страницы:
+</p>
+
+<p>
+$ man scrot
+</p>
+</div>
+</div>
+<div id="outline-container-org8b9e619" class="outline-3">
+<h3 id="org8b9e619"><span class="section-number-3">1.25</span> ripgrep</h3>
+<div class="outline-text-3" id="text-1-25">
+<p>
+grep -inr whofind
+ripgrep-установка:sudo pacman -S ripgrep
+сам поиск:rg -i "что ищем" .
+точка означает что ищем в текущей папке.
+без точки-поиск по всему компу.
+</p>
+</div>
+</div>
+<div id="outline-container-org5540da3" class="outline-3">
+<h3 id="org5540da3"><span class="section-number-3">1.26</span> pdf</h3>
+<div class="outline-text-3" id="text-1-26">
+<p>
+convert *.jpg file.pdf
+</p>
+
+<p>
+Объединить Несколько PDF в Один
+</p>
+
+<p>
+Объединить два PDF файла FILE1.pdf и FILE2.pdf в новый файл OUTPUT.pdf:
+</p>
+
+<p>
+$ convert FILE1.pdf FILE2.pdf OUTPUT.pdf
+</p>
+</div>
+</div>
+<div id="outline-container-org1a8141d" class="outline-3">
+<h3 id="org1a8141d"><span class="section-number-3">1.27</span> запись образа(программа)</h3>
+<div class="outline-text-3" id="text-1-27">
+<p>
+BalenaEtcher
+</p>
+</div>
+</div>
+<div id="outline-container-org7ac0bf3" class="outline-3">
+<h3 id="org7ac0bf3"><span class="section-number-3">1.28</span> moc</h3>
+<div class="outline-text-3" id="text-1-28">
+<p>
+H - показать справку по клавишам управления. Запомнив эту клавишу, про все остальное можно иногда забывать :-)
+Tab - переключиться между обозревателем файлов и плейлистом
+↑, ↓, PgUp/PgDn, Home/End - навигация по списку файлов/плейлисту
+Enter:
+в обозревателе файлов - войти в папку или начать воспроизведение выбранного файла (без изменения плейлиста)
+в плейлисте - переключиться на выбранный трек
+A (в обозревателе) - добавить файл или папку в плейлист
+Shift+A - добавить папку рекурсивно (со всеми подкаталогами и их содержимым)
+D (в плейлисте) - удалить файл из плейлиста
+Shift+C - очистить плейлист
+N - следующий трек
+B - предыдущий трек
+Shift+S - включить/выключить воспроизведение в случайном порядке (Shuffle)
+Shift+R - включить/выключить повтор плейлиста
+S - остановить воспроизведение
+Q - выйти из интерфейса (проигрыватель при этом продолжит воспроизведение), по команде mocp можно вернуться к интерфейсу
+Shift+Q - выйти и завершить работу проигрывателя
+Shift+&lt; - уменьшить громкость на 1%
+Shift+&gt; - увеличить громкость на 1%
+Управление из командной строки:
+Проигрывателем можно управлять и без использования псевдографического интерфейса, напрямую из командной строки. Обо всех опциях можно почитать в:
+man mocp
+</p>
+
+<p>
+Здесь мы лишь рассмотрим основные команды:
+mocp -G - пауза/воспроизведение
+mocp -f, mocp -r - следующий/предыдущий трек
+mocp -a «путь/к/файлу» - добавить файл или папку (рекурсивно) в плейлист
+mocp -c - очистить плейлист
+mocp -s - остановить воспроизведение
+mocp -p - начать воспроизведение с первого файла в плейлисте
+mocp -t s - включить/выключить воспроизведение в случайном порядке (Shuffle)
+mocp -x - завершить работу проигрывателя
+mocp -i - показать подробную информацию о текущем треке
+mocp -v 40 - установить громкость в 40%. -v +10, -v -3 - увеличить/уменьшить на n%
+</p>
+</div>
+</div>
+<div id="outline-container-org02f9a0c" class="outline-3">
+<h3 id="org02f9a0c"><span class="section-number-3">1.29</span> mc</h3>
+<div class="outline-text-3" id="text-1-29">
+<p>
+F1 – Help! (помощь, подсказка)
+</p>
+
+<p>
+F2 – вызов пользовательского меню
+</p>
+
+<p>
+F3 – просмотр содержимого файла
+</p>
+
+<p>
+F4 – редактирование содержимого файла (в сочетании с кнопкой «shift» - создание нового файла)
+</p>
+
+<p>
+F5 – копирование файла/директории
+</p>
+
+<p>
+F6 – перенос или переименование файла/директории
+</p>
+
+<p>
+F7 – создание новой директории
+</p>
+
+<p>
+F8 – удаление файла/директории
+</p>
+
+<p>
+F9 – переход в основное меню Midnight Commander
+</p>
+
+<p>
+F10 – выход (завершение работы mc)
+</p>
+
+<p>
+TAB, Ctrl+I – переход между панелями
+</p>
+
+<p>
+Insert, Ctrl+t – выделение файла/директории для каких либо операций над ними (повторное нажатие на выделенном объекте снимает выделение)
+</p>
+
+<p>
+Дополнительные команды:
+</p>
+
+<p>
+Ctrl+o – убрать панели с экрана (полезно для выполнения в консоли какой либо команды не выходя из mc, повторное нажатие комбинации вернёт панели на место)
+</p>
+
+<p>
+Ctrl+Space – подсчёт размера каталога
+</p>
+
+<p>
+Ctrl+r – перечитать содержимое каталога
+</p>
+
+<p>
+Ctrl+l – перерисовать экран
+</p>
+
+<p>
+Ctrl+u – поменять панели местами
+</p>
+
+<p>
+Ctrl+ – меню часто используемых каталогов (настаивается пользователем, см. Ctrl+x h)
+</p>
+
+<ul class="org-ul">
+<li>– отметить группу файлов с использованием регулярных выражений</li>
+</ul>
+
+<p>
+– снять отметку с группы файлов
+</p>
+
+<p>
+Ctrl+s, Alt+s – быстрый поиск файлов (после нажатия сочетания набираем искомый файл по первым символам наименования)
+</p>
+
+<p>
+Ctrl+Enter, Alt+Enter – копирует имя файла находящийся под указателем в командную строку
+</p>
+
+<p>
+Ctrl+x c – вызов окна для редактирования прав доступа к отмеченным файлам/директорий (chmod)
+</p>
+
+<p>
+Ctrl+x o – вызов окна смены владельца для отмеченных файлов/директорий (chown)
+</p>
+
+<p>
+Ctrl+x q – перевод пассивной панели в режим просмотра содержимого файла под указателем
+</p>
+
+<p>
+Ctrl+x h – добавление каталога под указателем в меню часто используемых каталогов (см. Ctrl+)
+</p>
+
+<p>
+Ctrl+x I – просмотр детальной информации об объекте под указателем в соседней панели
+</p>
+
+<p>
+Alt+t – переключить режим отображения текущей панели (стандартный, укороченный, расширенный)
+</p>
+
+<p>
+Alt+h – отобразить историю перемещения по каталогам
+</p>
+
+<p>
+Alt+a, Ctrl+x p – копирует полный путь к объекту текущей панели в командную строку
+</p>
+
+<p>
+Alt+, – переключает положение панелей (вертикально, горизонтально)
+</p>
+
+<p>
+Alt+. – показать/скрыть скрытые файлы или каталоги (имена которых начинаются на точку)
+</p>
+
+<p>
+Alt+Shift+? – вызов окна расширенного поиска
+</p>
+
+<p>
+Alt+o – показать содержимое каталога под указателем в соседней панели
+</p>
+
+<p>
+Alt+e – смена кодировки текущей панели
+</p>
+</div>
+</div>
+<div id="outline-container-org8ff3f81" class="outline-3">
+<h3 id="org8ff3f81"><span class="section-number-3">1.30</span> inxi(сведения о системе)</h3>
+<div class="outline-text-3" id="text-1-30">
+<p>
+Для этого нам достаточно ввести в Терминале команду inxi -F, и в итоге мы получим примерно такой вывод:
+</p>
+
+<p>
+inxi -F
+System: Host: mintdewdrop-desktop Kernel: 3.8.0-19-generic x86<sub>64</sub> (64 bit) Desktop: KDE 4.10.2 Distro: Ubuntu 13.04 raring
+Machine: Mobo: MSI model: MS-7309 version: 1.0 Bios: American Megatrends version: V9.5 date: 04/09/2009
+CPU: Dual core AMD Athlon 64 X2 5000+ (-MCP-) cache: 1024 KB flags: (lm nx sse sse2 sse3 svm)
+Clock Speeds: 1: 2612.127 MHz 2: 2612.127 MHz
+Graphics: Card: NVIDIA NV43 [GeForce 6600]
+X.Org: 1.13.3 drivers: nvidia (unloaded: fbdev,vesa,nouveau) Resolution: 1360x768@60.0hz
+GLX Renderer: GeForce 6600/PCIe/SSE2 GLX Version: 2.1.2 NVIDIA 304.88
+Audio: Card-1: NVIDIA MCP61 High Definition Audio driver: snd<sub>hda</sub><sub>intel</sub> Sound: ALSA ver: k3.8.0-19-generic
+Card-2: Logitech Webcam C210 driver: USB Audio
+Network: Card: NVIDIA MCP61 Ethernet driver: forcedeth
+IF: eth0 state: up speed: 100 Mbps duplex: full mac: f3:7a:86:c1:q7:e9
+Drives: HDD Total Size: 320.1GB (48.8% used) 1: id: /dev/sda model: WDC<sub>WD3200AAJS</sub> size: 320.1GB
+Partition: ID: / size: 20G used: 5.6G (30%) fs: ext4 ID: /home size: 240G used: 141G (62%) fs: ext4
+ID: swap-1 size: 3.36GB used: 0.00GB (0%) fs: swap
+RAID: No RAID devices detected - /proc/mdstat and md<sub>mod</sub> kernel raid module present
+Sensors: System Temperatures: cpu: 44.0C mobo: N/A
+Fan Speeds (in rpm): cpu: N/A
+Info: Processes: 150 Uptime: 19:27 Memory: 1207.4/2002.6MB Client: Shell inxi: 1.8.4
+</p>
+
+<p>
+Как видим, вывод inxi c ключом -F предоставил нам почти полную информацию о системе и железе, причем в довольно сжатом виде — только все самое необходимое!
+</p>
+
+<p>
+Если же нам нужно получить эту информацию в еще более сжатом виде, то выполняем в Терминале команду inxi с ключом -b:
+</p>
+
+<p>
+inxi -b
+System: Host: mintdewdrop-desktop Kernel: 3.8.0-19-generic x86<sub>64</sub> (64 bit) Desktop: KDE 4.10.2 Distro: Ubuntu 13.04 raring
+Machine: Mobo: MSI model: MS-7309 version: 1.0 Bios: American Megatrends version: V9.5 date: 04/09/2009
+CPU: Dual core AMD Athlon 64 X2 5000+ (-MCP-) clocked at 2612.127 MHz
+Graphics: Card: NVIDIA NV43 [GeForce 6600]
+X.Org: 1.13.3 drivers: nvidia (unloaded: fbdev,vesa,nouveau) Resolution: 1360x768@60.0hz
+GLX Renderer: GeForce 6600/PCIe/SSE2 GLX Version: 2.1.2 NVIDIA 304.88
+Network: Card: NVIDIA MCP61 Ethernet driver: forcedeth
+Drives: HDD Total Size: 320.1GB (48.9% used)
+Info: Processes: 151 Uptime: 19:40 Memory: 1373.4/2002.6MB Client: Shell inxi: 1.8.4
+</p>
+
+<p>
+Если вся информация о системе или железе нам не нужна, а нужно узнать только данные о графической подсистеме, или дистрибутиве, ядре и DE, или же о подключенных разделах жесткого диска, например, то просто меняем ключи этой команды и получаем только то, что нам нужно:
+</p>
+
+<p>
+inxi -G
+Graphics: Card: NVIDIA NV43 [GeForce 6600]
+X.Org: 1.13.3 drivers: nvidia (unloaded: fbdev,vesa,nouveau) Resolution: 1360x768@60.0hz
+GLX Renderer: GeForce 6600/PCIe/SSE2 GLX Version: 2.1.2 NVIDIA 304.88
+</p>
+
+<p>
+inxi -S
+System: Host: mintdewdrop-desktop Kernel: 3.8.0-19-generic x86<sub>64</sub> (64 bit) Desktop: KDE 4.10.2 Distro: Ubuntu 13.04 raring
+</p>
+
+<p>
+inxi -P
+Partition: ID: / size: 20G used: 5.6G (30%) fs: ext4 ID: /home size: 240G used: 141G (62%) fs: ext4
+ID: swap-1 size: 3.36GB used: 0.00GB (0%) fs: swap
+</p>
+
+<p>
+(здесь, пожалуй, стоит обратить внимание, что ключ -P дает нам посмотреть только примонтированные разделы жесткого диска, для того, чтобы увидеть не подключенные разделы, нужно выполнить inxi с ключом -o)
+</p>
+
+<p>
+Ну и так далее… Полную справку по утилите Inxi можно получить, выполнив команду inxi -h — советую внимательно ознакомиться c ней, там есть еще много чего интересного
+</p>
+</div>
+</div>
+<div id="outline-container-org85d26d7" class="outline-3">
+<h3 id="org85d26d7"><span class="section-number-3">1.31</span> fm nnn</h3>
+<div class="outline-text-3" id="text-1-31">
+<p>
+Двухпанельный файловый менеджер не всегда удобен, когда необходимо просто пройтись по каталогам и найти/открыть нужный файл. В этом случае гораздо лучше подойдет nnn — простой и быстрый как молния файловый менеджер без лишних обвесок и со всей необходимой функциональностью для навигации по файловой системе.
+</p>
+
+<p>
+Nnn представляет файловое дерево в виде списка с указанием даты модификации и размера файлов. Навигация крайне простая — стрелки вверх/вниз для перемещения по списку, вперед/назад для перехода между каталогами (клавиши h, j, k, l, как в Vim, тоже поддерживаются). Клавиши &amp; и - возвращают к начальному и последнему посещенному каталогу, D открывает подробную информацию о файле, Ctrl + R — для переименования.
+</p>
+
+<p>
+В nnn есть система поиска в реальном времени, вызываемая по клавише /, и система закладок. Просто нажми b в нужном каталоге, введи имя закладки и возвращайся к нему когда вздумается с помощью Ctrl + V.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf887ff3" class="outline-3">
+<h3 id="orgf887ff3"><span class="section-number-3">1.32</span> Micro</h3>
+<div class="outline-text-3" id="text-1-32">
+<p>
+Micro — легкий, гибкий, интуитивно понятный текстовый редактор, которым вы с лёгкостью можете пользоваться в своём любимом терминале. Создатель микро был вдохновлен nano, но используя Micro вам не нужно переучиваться и запоминать новые комбинации клавиш для работы, как в том же nano или еще более сложном vim. В микро используются практически те же горячие клавиши как и в любом другом GUI тестовом редакторе, кроме того по дефолту имеет отличную поддержку мыши с прокруткой, выделением текста и сменой позиции курсора. Имеет поддержку буфера обмена системы, для этого требуется утилита xclip или xsel.
+Monokai colorscheme &#x2013; this is the default colorscheme
+</p>
+
+<p>
+Горячие клавиши
+ctrl-Q выход
+ctrl-S сохранить
+ctrl-С копировать
+ctrl-X вырезать
+ctrl-K вырезать строчку
+ctrl-V вставить
+ctrl-Z отмена
+ctrl-F поиск (ctrl-N дальше, ctrl-P предыдущий)
+ctrl-A выбрать всё
+ctrl-E командная строка
+ctrl-T новая вкладка
+ctrl-G помощь
+alt-G горячие клавиши
+При желании горячие клавиши можно поменять, подробнее узнать об этом можно здесь: <a href="https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md">https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md</a>
+</p>
+
+<p>
+Рассмотрим его установку и настройку в Arch linux
+В Arch Linux, micro находится в пользовательском репозитории AUR
+Установка с помощью aur помощника YAY:
+$ yay -S micro &#x2013;noconfirm
+</p>
+
+<p>
+Основной конфигурационный файл по умолчанию находится:
+~/.config/micro/settings.json
+Через этот файл производится основная настройка micro например можно отключить подсветку синтаксиса или изменить тему оформления
+</p>
+
+<p>
+Micro поддерживает подсветку синтаксиса для более чем 90 языков, + можно создавать свои правила подсветки к примеру подсветка комментариев в обычных текстовых файлах.
+</p>
+
+<p>
+Создаём подсветку комментариев для обычных текстовых файлов с конкретным именем:
+$ mkdir ~/.config/micro/syntax
+$ micro ~/.config/micro/syntax/text.yaml
+</p>
+
+<p>
+Вставляем в файл ctrl-V следующее:
+</p>
+
+<p>
+filetype: text/plain
+</p>
+
+<p>
+detect:
+filename: "config"
+</p>
+
+<p>
+rules:
+</p>
+<ul class="org-ul">
+<li>constant.string:</li>
+</ul>
+<p>
+start: "\""
+end: "\""
+skip: "\\\\."
+rules: []
+</p>
+
+<ul class="org-ul">
+<li>comment:</li>
+</ul>
+<p>
+start: "#"
+end: "$"
+rules: []
+</p>
+
+<p>
+ctrl-S сохранить
+ctrl-Q выход
+</p>
+
+<p>
+По умолчанию micro поставляется с темами на 16 и 256 цветов
+Изменить оформление можно в файле ~/.config/micro/settings.json
+Указываем свою тему в строчке: "colorscheme": "default",
+</p>
+
+<p>
+Темы 256 цветов:
+• monokai -default цветовая гамма.
+• zenburn
+• gruvbox
+• darcula
+• twilight
+• railscast
+</p>
+
+<p>
+Темы 16 цветов
+• simple - использует 16 цветовую схему вашего терминала
+• cmc-16
+• cmc-paper - cmc-16, только на белом фоне
+• geany
+</p>
+
+<p>
+Рассмотрим некоторые опции из файла настроек ~/.config/micro/settings.json
+</p>
+
+<p>
+Включить перенос строк (по умолчанию false):
+"softwrap": true,
+</p>
+
+<p>
+Количество строк, которые отображаются выше и ниже курсора.
+"scrollmargin": 3,
+</p>
+
+<p>
+Указываем скорость прокрутки (количество строк)
+"scrollspeed": 4
+</p>
+
+<p>
+Показывать полосу прокрутки
+"scrollbar": true,
+</p>
+
+<p>
+Включаем поиск по файлу без учета регистра
+"ignorecase": true,
+</p>
+
+<p>
+Включить/выключить проверку синтаксиса
+"syntax": true,
+</p>
+
+<p>
+Подробней о каждой опции файла настроек:
+<a href="https://github.com/zyedidia/micro/blob/master/runtime/help/options.md">https://github.com/zyedidia/micro/blob/master/runtime/help/options.md</a>
+</p>
+
+<p>
+Мнение АВТОРА:
+Если вы хотите больше пользоваться консолью/терминалом, но по каким либо причинам вам не нравится nano, или вы не хотите и у вас нет времени изучать vim, то Micro отлично подойдет как альтернатива, особенно для редактирования каких либо конфиг файлов. Отлично работает в связке с консольным файловым менеджером Ranger.
+</p>
+
+<p>
+Официальная страничка проeта Micro на github: <a href="https://github.com/zyedidia/micro">https://github.com/zyedidia/micro</a>
+На github вы можете более подробно ознакомиться с Micro, его настройкой и 
+</p>
+</div>
+</div>
+<div id="outline-container-org59fb522" class="outline-3">
+<h3 id="org59fb522"><span class="section-number-3">1.33</span> i3 prog</h3>
+<div class="outline-text-3" id="text-1-33">
+<p>
+flameshot xfce4-power-manager simplescreenrecorder feh mousepad pcmanfm vlc 
+terminator ranger mc moc ristretto atool w3m ffmpegthumbnailer youtube-dl nano 
+wget evince mediainfo vim ripgrep scrot abiword gnumeric paromtv ripgrep
+</p>
+</div>
+</div>
+<div id="outline-container-org59ca253" class="outline-3">
+<h3 id="org59ca253"><span class="section-number-3">1.34</span> Выпадающий терминал в XFCE</h3>
+<div class="outline-text-3" id="text-1-34">
+<p>
+для создания выпадающего терминала:
+настройки&gt;клавиатура&gt;комбинации клавиш&gt;добавить&gt;xfce4-terminal &#x2013;drop-down&gt; я назначил F12
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2021-05-21 Пт 13:07</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
