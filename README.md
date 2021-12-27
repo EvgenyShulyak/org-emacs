@@ -7,5 +7,5 @@ files in org format for emacs (simple note organizer)<br />
  
 <br />
 <br />
-<code>![orgemacs](/image/org_emacs.png "orgemacs")</code>
+<code>![orgemacs](/image/org_emacs.png "orgemacs") {width=200px}</code>
 
